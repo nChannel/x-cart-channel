@@ -1,0 +1,269 @@
+{
+  "name": "X-Cart Get SalesOrder Schema",
+  "schemaDef": {
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+      "orderId": {
+        "type": "number"
+      },
+      "orderNumber": {
+        "type": "string"
+      },
+      "subtotal": {
+        "type": "number"
+      },
+      "total": {
+        "type": "number"
+      },
+      "shippingCost": {
+        "type": "number"
+      },
+      "paymentFee": {
+        "type": "number"
+      },
+      "taxAmount": {
+        "type": "number"
+      },
+      "discountValue": {
+        "type": "number"
+      },
+      "otherSurcharges": {
+        "type": "array"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string"
+            },
+            "productId": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "attributes": {
+              "type": "array"
+            },
+            "price": {
+              "type": "number"
+            },
+            "weight": {
+              "type": "number"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "subtotal": {
+              "type": "number"
+            },
+            "total": {
+              "type": "number"
+            },
+            "releaseDate": {
+              "type": "string"
+            },
+            "URL": {
+              "type": "string"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "freeShipping": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "orderDate": {
+        "type": "string"
+      },
+      "updateDate": {
+        "type": "string"
+      },
+      "trackingNumber": {
+        "type": "string"
+      },
+      "customerNotes": {
+        "type": "string"
+      },
+      "adminNotes": {
+        "type": "string"
+      },
+      "coupon": {
+        "type": "string"
+      },
+      "customerInfo": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "number"
+          },
+          "isAnonymous": {
+            "type": "boolean"
+          },
+          "login": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "addedDate": {
+            "type": "string"
+          },
+          "membership": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          }
+        }
+      },
+      "billingInfo": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zipcode": {
+            "type": "string"
+          },
+          "isDefaultShippingAddress": {
+            "type": "boolean"
+          },
+          "isDefaultBillingAddress": {
+            "type": "boolean"
+          }
+        }
+      },
+      "shippingInfo": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zipcode": {
+            "type": "string"
+          },
+          "isDefaultShippingAddress": {
+            "type": "boolean"
+          },
+          "isDefaultBillingAddress": {
+            "type": "boolean"
+          }
+        }
+      },
+      "paymentMethod": {
+        "type": "string"
+      },
+      "paymentStatus": {
+        "type": "string"
+      },
+      "shippingMethod": {
+        "type": "string"
+      },
+      "shippingStatus": {
+        "type": "string"
+      },
+      "transactions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "human_status": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "details": {
+        "type": "array"
+      }
+    }
+  },
+  "tags": [
+    "X-Cart",
+    "Get",
+    "SalesOrder"
+  ],
+  "audit": {}
+}
