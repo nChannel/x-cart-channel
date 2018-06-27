@@ -1,5 +1,5 @@
 function GetSalesOrderFromQuery(ncUtil, channelProfile, flowContext, payload, callback) {
-  const nc = require("../util/ncUtil");
+  const nc = require("../util/ncUtils");
   const referenceLocations = ["salesOrderBusinessReferences"];
   const stub = new nc.Stub("GetSalesOrderFromQuery", referenceLocations, ...arguments);
   const qs = require("qs");
