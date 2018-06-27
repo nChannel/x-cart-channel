@@ -110,7 +110,7 @@
         }
       ],
       "configValues": {
-        "protocol": "https",
+        "protocol": "http",
         "implFolderName": "x-cart-channel"
       }
     }
