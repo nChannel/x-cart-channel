@@ -34,9 +34,6 @@ class Stub {
 
     if (!isNonEmptyArray(this.messages)) {
       this.request = require("request-promise").defaults({
-        auth: {
-          bearer: this.channelProfile.channelAuthValues.access_token
-        },
         baseUrl: this.getBaseUrl(),
         json: true,
         gzip: true,
@@ -77,42 +74,13 @@ class Stub {
   }
 
   validateQueryDoc(doc) {
-    if (doc.remoteIDs && (!doc.searchFields && !doc.modifiedDateRange && !doc.createdDateRange)) {
+    if (doc.remoteIDs && !doc.createdDateRange) {
       this.queryType = "remoteIDs";
 
       if (!isNonEmptyArray(doc.remoteIDs)) {
         this.messages.push("The remoteIDs property must be an array with at least 1 value.");
       }
-    } else if (doc.searchFields && (!doc.remoteIDs && !doc.modifiedDateRange && !doc.createdDateRange)) {
-      this.queryType = "searchFields";
-
-      if (!isNonEmptyArray(doc.searchFields)) {
-        this.messages.push("The searchFields property must be an array with at least 1 key value pair object.");
-      } else {
-        if (
-          !doc.searchFields.every(
-            searchField => isNonEmptyString(searchField.searchField) && isNonEmptyArray(searchField.searchValues)
-          )
-        ) {
-          this.messages.push(
-            "searchFields array elements must be in the form: { searchField: 'key', searchValues: ['value_1'] }."
-          );
-        }
-      }
-    } else if (doc.modifiedDateRange && (!doc.searchFields && !doc.remoteIDs && !doc.createdDateRange)) {
-      this.queryType = "modifiedDateRange";
-
-      if (
-        !moment(doc.modifiedDateRange.startDateGMT).isValid() ||
-        !moment(doc.modifiedDateRange.endDateGMT).isValid()
-      ) {
-        this.messages.push("modifiedDateRange query requires valid startDateGMT and endDateGMT properties.");
-      } else {
-        if (!moment(doc.modifiedDateRange.startDateGMT).isBefore(doc.modifiedDateRange.endDateGMT)) {
-          this.messages.push("startDateGMT must come before endDateGMT.");
-        }
-      }
-    } else if (doc.createdDateRange && (!doc.searchFields && !doc.modifiedDateRange && !doc.remoteIDs)) {
+    } else if (doc.createdDateRange && !doc.remoteIDs) {
       this.queryType = "createdDateRange";
 
       if (!moment(doc.createdDateRange.startDateGMT).isValid() || !moment(doc.createdDateRange.endDateGMT).isValid()) {
@@ -123,9 +91,7 @@ class Stub {
         }
       }
     } else {
-      this.messages.push(
-        "Query doc must contain one (and only one) of remoteIDs, searchFields, modifiedDateRange, or createdDateRange."
-      );
+      this.messages.push("Query doc must contain one (and only one) of remoteIDs, or createdDateRange.");
     }
   }
 
@@ -148,10 +114,10 @@ class Stub {
           );
         }
 
-        if (!isString(this.channelProfile.channelSettingsValues.store_base_url)) {
+        if (!isString(this.channelProfile.channelSettingsValues.adminUrl)) {
           this.messages.push(
-            `The channelProfile.channelSettingsValues.store_base_url string is ${
-              this.channelProfile.channelSettingsValues.store_base_url == null ? "missing" : "invalid"
+            `The channelProfile.channelSettingsValues.adminUrl string is ${
+              this.channelProfile.channelSettingsValues.adminUrl == null ? "missing" : "invalid"
             }.`
           );
         }
@@ -164,10 +130,10 @@ class Stub {
           }.`
         );
       } else {
-        if (!isNonEmptyString(this.channelProfile.channelAuthValues.access_token)) {
+        if (!isNonEmptyString(this.channelProfile.channelAuthValues.apiKey)) {
           this.messages.push(
-            `The channelProfile.channelAuthValues.access_token string is ${
-              this.channelProfile.channelAuthValues.access_token == null ? "missing" : "invalid"
+            `The channelProfile.channelAuthValues.apiKey string is ${
+              this.channelProfile.channelAuthValues.apiKey == null ? "missing" : "invalid"
             }.`
           );
         }
@@ -188,23 +154,11 @@ class Stub {
   }
 
   getBaseUrl() {
-    let baseUrl = `${this.channelProfile.channelSettingsValues.protocol}://${
-      this.channelProfile.channelSettingsValues.store_base_url
-    }`;
-
-    while (baseUrl.endsWith("/")) {
-      baseUrl = baseUrl.slice(0, -1);
+    let hostName = this.channelProfile.channelSettingsValues.adminUrl;
+    if (hostName.contains("://")) {
+      hostName = hostName.split("://")[1];
     }
-
-    if (!baseUrl.endsWith("/rest")) {
-      baseUrl = baseUrl.concat("/rest");
-    }
-
-    if (isNonEmptyString(this.channelProfile.channelSettingsValues.store_code)) {
-      baseUrl = baseUrl.concat(`/${this.channelProfile.channelSettingsValues.store_code}`);
-    }
-
-    return baseUrl;
+    return `${this.channelProfile.channelSettingsValues.protocol}://${hostName}`;
   }
 }
 
