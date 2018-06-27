@@ -155,7 +155,7 @@ class Stub {
 
   getBaseUrl() {
     let hostName = this.channelProfile.channelSettingsValues.adminUrl;
-    if (hostName.contains("://")) {
+    if (hostName.includes("://")) {
       hostName = hostName.split("://")[1];
     }
     return `${this.channelProfile.channelSettingsValues.protocol}://${hostName}`;
