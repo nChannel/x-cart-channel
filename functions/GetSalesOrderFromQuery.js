@@ -52,7 +52,7 @@ function GetSalesOrderFromQuery(ncUtil, channelProfile, flowContext, payload, ca
               nc.moment(stub.payload.doc.createdDateRange.startDateGMT).unix(),
               nc.moment(stub.payload.doc.createdDateRange.endDateGMT).unix()
             ],
-            limit: [stub.payload.doc.page_size * (stub.payload.doc.page - 1), stub.payload.doc.page_size]
+            limit: [stub.payload.doc.pageSize * (stub.payload.doc.page - 1), stub.payload.doc.pageSize]
           }
         };
 
@@ -67,10 +67,10 @@ function GetSalesOrderFromQuery(ncUtil, channelProfile, flowContext, payload, ca
 
   async function searchForOrders(query) {
     let orders = [];
+    let hasMore = false;
     const currentPage = stub.payload.doc.page;
     const currentPageIndex = currentPage - 1;
-    const pageSize = stub.payload.doc.page_size;
-    let totalCount;
+    const pageSize = stub.payload.doc.pageSize;
 
     if (nc.isArray(query)) {
       const queries = query.slice(currentPageIndex * pageSize, currentPage * pageSize);
@@ -78,23 +78,21 @@ function GetSalesOrderFromQuery(ncUtil, channelProfile, flowContext, payload, ca
       const responses = await Promise.all(queries.map(executeQuery));
       orders = responses.map(res => res.body);
 
-      totalCount = query.length;
+      const totalCount = query.length;
+      const totalPages = Math.ceil(totalCount / pageSize);
+      hasMore = currentPage < totalPages;
+
+      logInfo(`Found ${totalCount} total orders.`);
+      if (totalCount > 0) {
+        logInfo(`Returning ${orders.length} orders from page ${currentPage} of ${totalPages}.`);
+      }
     } else {
       const response = await executeQuery(query);
 
       if (nc.isNonEmptyArray(response.body)) {
         orders = response.body;
       }
-
-      totalCount = Number(response.headers["X-Result-Count"]);
-    }
-
-    const totalPages = Math.ceil(totalCount / pageSize);
-    const hasMore = currentPage < totalPages;
-
-    logInfo(`Found ${totalCount} total orders.`);
-    if (totalCount > 0) {
-      logInfo(`Returning ${orders.length} orders from page ${currentPage} of ${totalPages}.`);
+      hasMore = orders.length >= pageSize;
     }
 
     stub.out.payload = [];
@@ -120,8 +118,8 @@ function GetSalesOrderFromQuery(ncUtil, channelProfile, flowContext, payload, ca
   }
 
   async function executeQuery(query) {
-    logInfo(`Executing query: GET ${stub.request.baseUrl}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.get({ qsStringifyOptions: { options: { encode: false } }, qs: query });
+    logInfo(`Executing query: GET ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
+    const response = await stub.request.get({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query });
     stub.out.response.endpointStatusCode = response.statusCode;
     stub.out.response.endpointStatusMessage = response.message;
     return response;
