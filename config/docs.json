@@ -6,10 +6,10 @@
   },
   "channelProfile": {
     "channelAuthValues": {
-      "apiKey": "read-write-token"
+      "apiKey": "***REMOVED***"
     },
     "channelSettingsValues": {
-      "adminUrl": "https://localhost/admin.php"
+      "adminUrl": "http://***REMOVED***/xcart/admin.php"
     }
   },
   "docs": [
@@ -846,26 +846,51 @@
         {
           "ncStatusCode": 201,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            }
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 201,
+              "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 152,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
@@ -873,31 +898,50 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
-          "links": [
-            {
-              "uri": "/",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 400,
-              "responsePayload": {}
-            }
-          ],
+          "links": [],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            }
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -905,19 +949,47 @@
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -925,7 +997,7 @@
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         }
       ]
@@ -936,26 +1008,225 @@
         {
           "ncStatusCode": 201,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            }
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 201,
+              "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 152,
+                "sku": "TEST-SKU"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 410,
+                "sku": "TEST-SKU-22"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 411,
+                "sku": "TEST-SKU-33"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 412,
+                "sku": "TEST-SKU-44"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 413,
+                "sku": "TEST-SKU-55"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 772
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 773
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 774
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 775
               }
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
@@ -963,31 +1234,152 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
-          "links": [
-            {
-              "uri": "/",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 400,
-              "responsePayload": {}
-            }
-          ],
+          "links": [],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    },
+                    {
+                      "attribute_id": 116,
+                      "attribute_option_id": 251
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            }
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -995,19 +1387,148 @@
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    },
+                    {
+                      "attribute_id": 116,
+                      "attribute_option_id": 251
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            }
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1015,7 +1536,7 @@
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         }
       ]
@@ -1116,26 +1637,52 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 152,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
@@ -1143,31 +1690,51 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
-          "links": [
-            {
-              "uri": "/",
-              "method": "PUT",
-              "replyHeaders": {},
-              "statusCode": 400,
-              "responsePayload": {}
-            }
-          ],
+          "links": [],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -1175,19 +1742,47 @@
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1195,7 +1790,7 @@
             }
           ],
           "channelProfile": {
-            "productBusinessReferences": ["productid"]
+            "productBusinessReferences": ["sku"]
           }
         }
       ]
@@ -1206,26 +1801,382 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-44",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-55",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 152,
+                "sku": "TEST-SKU",
+                "variants": [
+                  {
+                    "id": 410,
+                    "price": 0,
+                    "defaultPrice": true,
+                    "amount": 0,
+                    "defaultAmount": true,
+                    "weight": 0,
+                    "defaultWeight": true,
+                    "sku": "TEST-SKU-22",
+                    "defaultValue": false,
+                    "options": [
+                      {
+                        "attribute_id": 103,
+                        "attribute_option_id": 237
+                      },
+                      {
+                        "attribute_id": 90,
+                        "attribute_option_id": 222
+                      }
+                    ]
+                  },
+                  {
+                    "id": 411,
+                    "price": 0,
+                    "defaultPrice": true,
+                    "amount": 0,
+                    "defaultAmount": true,
+                    "weight": 0,
+                    "defaultWeight": true,
+                    "sku": "TEST-SKU-33",
+                    "options": [
+                      {
+                        "attribute_id": 103,
+                        "attribute_option_id": 237
+                      },
+                      {
+                        "attribute_id": 90,
+                        "attribute_option_id": 223
+                      }
+                    ]
+                  },
+                  {
+                    "id": 412,
+                    "price": 0,
+                    "defaultPrice": true,
+                    "amount": 0,
+                    "defaultAmount": true,
+                    "weight": 0,
+                    "defaultWeight": true,
+                    "sku": "TEST-SKU-44",
+                    "options": [
+                      {
+                        "attribute_id": 103,
+                        "attribute_option_id": 238
+                      },
+                      {
+                        "attribute_id": 90,
+                        "attribute_option_id": 222
+                      }
+                    ]
+                  },
+                  {
+                    "id": 413,
+                    "price": 0,
+                    "defaultPrice": true,
+                    "amount": 0,
+                    "defaultAmount": true,
+                    "weight": 0,
+                    "defaultWeight": true,
+                    "sku": "TEST-SKU-55",
+                    "variant_id": "TEST-SKU-b-1",
+                    "options": [
+                      {
+                        "attribute_id": 103,
+                        "attribute_option_id": 238
+                      },
+                      {
+                        "attribute_id": 90,
+                        "attribute_option_id": 223
+                      }
+                    ]
+                  }
+                ],
+                "productClass": {
+                  "id": 3,
+                  "position": 0
+                },
+                "attributeValueC": [],
+                "attributeValueT": [],
+                "attributeValueS": [
+                  {
+                    "position": 0,
+                    "priceModifier": 0,
+                    "priceModifierType": "p",
+                    "weightModifier": 0,
+                    "weightModifierType": "p",
+                    "defaultValue": false,
+                    "id": 509
+                  },
+                  {
+                    "position": 0,
+                    "priceModifier": 0,
+                    "priceModifierType": "p",
+                    "weightModifier": 0,
+                    "weightModifierType": "p",
+                    "defaultValue": false,
+                    "id": 511
+                  },
+                  {
+                    "position": 0,
+                    "priceModifier": 0,
+                    "priceModifierType": "p",
+                    "weightModifier": 0,
+                    "weightModifierType": "p",
+                    "defaultValue": false,
+                    "id": 512
+                  },
+                  {
+                    "position": 0,
+                    "priceModifier": 0,
+                    "priceModifierType": "p",
+                    "weightModifier": 0,
+                    "weightModifierType": "p",
+                    "defaultValue": false,
+                    "id": 513
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/410",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 410,
+                "sku": "TEST-SKU-22"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/411",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 411,
+                "sku": "TEST-SKU-33"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/412",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 412,
+                "sku": "TEST-SKU-44"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/413",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 413,
+                "sku": "TEST-SKU-55"
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/509",
+              "method": "DELETE",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {}
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/511",
+              "method": "DELETE",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {}
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/512",
+              "method": "DELETE",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {}
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/513",
+              "method": "DELETE",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {}
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 772
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 773
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 774
+              }
+            },
+            {
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "id": 775
               }
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
@@ -1233,31 +2184,153 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
-          "links": [
-            {
-              "uri": "/",
-              "method": "PUT",
-              "replyHeaders": {},
-              "statusCode": 400,
-              "responsePayload": {}
-            }
-          ],
+          "links": [],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    },
+                    {
+                      "attribute_id": 116,
+                      "attribute_option_id": 251
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -1265,19 +2338,149 @@
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99,
+              "sku": "TEST-SKU",
+              "enabled": false,
+              "weight": 2.5,
+              "variants": [
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-22",
+                  "defaultValue": false,
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    },
+                    {
+                      "attribute_id": 116,
+                      "attribute_option_id": 251
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 237
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 222
+                    }
+                  ]
+                },
+                {
+                  "price": 0,
+                  "defaultPrice": true,
+                  "amount": 0,
+                  "defaultAmount": true,
+                  "weight": 0,
+                  "defaultWeight": true,
+                  "sku": "TEST-SKU-33",
+                  "variant_id": "TEST-SKU-b-1",
+                  "options": [
+                    {
+                      "attribute_id": 103,
+                      "attribute_option_id": 238
+                    },
+                    {
+                      "attribute_id": 90,
+                      "attribute_option_id": 223
+                    }
+                  ]
+                }
+              ],
+              "variantsAttributes": [
+                {
+                  "visible": true,
+                  "id": 90,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                },
+                {
+                  "visible": true,
+                  "id": 103,
+                  "position": 0,
+                  "decimals": 0,
+                  "type": "S",
+                  "addToNew": ""
+                }
+              ],
+              "productClass": {
+                "id": 3,
+                "position": 0
+              },
+              "cleanURLs": [
+                {
+                  "id": 53,
+                  "cleanURL": "testing-item.html"
+                }
+              ],
+              "translations": [
+                {
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "briefDescription": "<p>Short description</p>",
+                  "metaTags": "",
+                  "metaDesc": "Short description",
+                  "metaTitle": "",
+                  "label_id": 61,
+                  "code": "en"
+                }
+              ]
+            },
+            "productRemoteID": 152
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "http://***REMOVED***/xcart/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1285,7 +2488,7 @@
             }
           ],
           "channelProfile": {
-            "productGroupBusinessReferences": ["productgroupid"]
+            "productBusinessReferences": ["sku"]
           }
         }
       ]

@@ -50,7 +50,10 @@
   "GetSalesOrderFromQuery": {
     "statusCodes": [200, 204, 206, 400, 429, 500]
   },
-  "InsertProduct": {
+  "InsertProductSimple": {
+    "statusCodes": [201, 400, 429, 500]
+  },
+  "InsertProductMatrix": {
     "statusCodes": [201, 400, 429, 500]
   },
   "InsertProductGroup": {
@@ -65,7 +68,10 @@
   "InsertSalesOrder": {
     "statusCodes": [201, 400, 429, 500]
   },
-  "UpdateProduct": {
+  "UpdateProductSimple": {
+    "statusCodes": [200, 400, 429, 500]
+  },
+  "UpdateProductMatrix": {
     "statusCodes": [200, 400, 429, 500]
   },
   "UpdateProductGroup": {

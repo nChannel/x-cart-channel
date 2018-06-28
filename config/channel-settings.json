@@ -29,6 +29,95 @@
       }
     },
     {
+      "name": "PUT PRODUCT",
+      "description": "PUT PRODUCT",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCT",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "doPutProductPricingFlag": false,
+          "doPutProductQuantityFlag": false,
+          "doUpdateProduct": true,
+          "canUpdateProductPricingFlag": false,
+          "canUpdateProductQuantityFlag": false,
+          "canUpdateProduct": true,
+          "canUpdateSimpleProduct": true,
+          "canUpdateMatrixProduct": true,
+          "canInsertSimpleProduct": true,
+          "canInsertMatrixProduct": true
+        },
+        "configView": ["doUpdateProduct"],
+        "configModel": {
+          "required": [
+            "doPutProductPricingFlag",
+            "doPutProductQuantityFlag",
+            "doUpdateProduct",
+            "canUpdateProductPricingFlag",
+            "canUpdateProductQuantityFlag",
+            "canUpdateProduct",
+            "canUpdateSimpleProduct",
+            "canUpdateMatrixProduct",
+            "canInsertSimpleProduct",
+            "canInsertMatrixProduct"
+          ],
+          "properties": {
+            "doPutProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductPricingFlag"
+            },
+            "doPutProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductQuantityFlag"
+            },
+            "canUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateProductPricingFlag"
+            },
+            "canUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateProductQuantityFlag"
+            },
+            "canUpdateProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateProduct"
+            },
+            "doUpdateProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProduct"
+            },
+            "canUpdateSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateSimpleProduct"
+            },
+            "canUpdateMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateMatrixProduct"
+            },
+            "canInsertSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertSimpleProduct"
+            },
+            "canInsertMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertMatrixProduct"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": { "productBusinessReferences": ["sku"] },
+        "remoteID": "product_id",
+        "businessReferences": ["sku"],
+        "children": []
+      }
+    },
+    {
       "name": "PUT FULFILLMENT",
       "description": "PUT FULFILLMENT",
       "channelVerb": "PUT",
