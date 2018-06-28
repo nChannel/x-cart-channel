@@ -6,10 +6,10 @@
   },
   "channelProfile": {
     "channelAuthValues": {
-      "apiKey": "***REMOVED***"
+      "apiKey": "read-write-token"
     },
     "channelSettingsValues": {
-      "adminUrl": "http://***REMOVED***/xcart/admin.php"
+      "adminUrl": "https://localhost/admin.php"
     }
   },
   "docs": [
