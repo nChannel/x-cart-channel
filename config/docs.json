@@ -67,7 +67,7 @@
                       "subtotal": 34.99,
                       "total": 34.99,
                       "releaseDate": "2018-01-07T02:49:33-05:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=10",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=10",
                       "enabled": true,
                       "freeShipping": false
                     }
@@ -170,7 +170,7 @@
                       "subtotal": 305.88,
                       "total": 305.88,
                       "releaseDate": "2018-01-07T00:00:00-05:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=15",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=15",
                       "enabled": true,
                       "freeShipping": false
                     },
@@ -189,7 +189,7 @@
                       "subtotal": 45.43,
                       "total": 45.43,
                       "releaseDate": "2018-05-27T03:49:33-04:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=27",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=27",
                       "enabled": true,
                       "freeShipping": false
                     }
@@ -342,7 +342,7 @@
                       "subtotal": 19.99,
                       "total": 19.99,
                       "releaseDate": "2018-01-07T02:49:33-05:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=13",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=13",
                       "enabled": true,
                       "freeShipping": false
                     }
@@ -434,7 +434,7 @@
                       "subtotal": 39.98,
                       "total": 39.98,
                       "releaseDate": "2018-01-07T02:49:33-05:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=3",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=3",
                       "enabled": true,
                       "freeShipping": false
                     },
@@ -453,7 +453,7 @@
                       "subtotal": 44.97,
                       "total": 44.97,
                       "releaseDate": "2018-07-06T03:49:33-04:00",
-                      "URL": "http://***REMOVED***/xcart/?target=product&amp;product_id=8",
+                      "URL": "http://thekerseys.org/xcart/?target=product&amp;product_id=8",
                       "enabled": true,
                       "freeShipping": false
                     }
@@ -875,11 +875,11 @@
               ]
             }
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -898,9 +898,17 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
-          "links": [],
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 401,
+              "responsePayload": {}
+            }
+          ],
           "channelProfile": {
             "productBusinessReferences": ["sku"]
           }
@@ -937,11 +945,11 @@
               ]
             }
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -985,11 +993,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1135,11 +1143,11 @@
               ]
             }
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1149,7 +1157,7 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1159,7 +1167,7 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1169,7 +1177,7 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1179,7 +1187,7 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1189,7 +1197,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1198,7 +1207,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1207,7 +1217,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1216,7 +1227,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1234,9 +1246,17 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
-          "links": [],
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 401,
+              "responsePayload": {}
+            }
+          ],
           "channelProfile": {
             "productBusinessReferences": ["sku"]
           }
@@ -1375,11 +1395,11 @@
               ]
             }
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -1524,11 +1544,11 @@
               ]
             }
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/0",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1667,11 +1687,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -1690,7 +1710,7 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [],
           "channelProfile": {
@@ -1730,11 +1750,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -1778,11 +1798,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1929,11 +1949,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2071,7 +2091,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/410",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/410",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2081,7 +2102,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/411",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/411",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2091,7 +2113,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/412",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/412",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2101,7 +2124,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=xc-productvariants-productvariant/413",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=xc-productvariants-productvariant/413",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2111,35 +2135,40 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/509",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/509",
               "method": "DELETE",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {}
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/511",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/511",
               "method": "DELETE",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {}
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/512",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/512",
               "method": "DELETE",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {}
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/513",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/513",
               "method": "DELETE",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {}
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2148,7 +2177,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2157,7 +2187,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2166,7 +2197,8 @@
               }
             },
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=attributevalue-attributevalueselect/0",
+              "uri":
+                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 200,
@@ -2184,7 +2216,7 @@
           "payload": {
             "doc": {}
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [],
           "channelProfile": {
@@ -2326,11 +2358,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -2476,11 +2508,11 @@
             },
             "productRemoteID": 152
           },
-          "baseUri": "http://***REMOVED***/xcart/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "?target=RESTAPI&_key=***REMOVED***&_schema=default&_path=product/152",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
