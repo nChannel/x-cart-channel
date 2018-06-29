@@ -100,7 +100,6 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
     if (response.statusCode === 200 && response.body) {
       out.payload = {
         doc: response.body,
-        productRemoteID: response.body.product_id,
         productBusinessReference: nc.extractBusinessReferences(channelProfile.productBusinessReferences, response.body)
       };
 

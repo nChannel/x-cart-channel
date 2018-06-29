@@ -77,7 +77,9 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
 
   async function updateProduct() {
     let variants = payload.doc.variants;
+    let attributeValues = payload.doc.attributeValues;
     delete payload.doc.variants;
+    delete payload.doc.attributeValues;
 
     let response = await request
       .put({
@@ -101,12 +103,8 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
       throw err;
     });
 
-    await removeAttributeValues(
-      response.body.attributeValueS,
-      response.body.attributeValueT,
-      response.body.attributeValueC
-    );
-    await createAttributeValues(variants);
+    await removeAttributeValues(response.body.attributeValueT, response.body.attributeValueC);
+    await createAttributeValues(attributeValues);
 
     return response;
   }
@@ -137,6 +135,8 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
         logInfo(`Variant Updated with ID: ${updatedProduct.variants[i].id}`);
         variant.id = updatedProduct.variants[i].id;
         variant.options = options;
+
+        updateAttributeVariantValues(variant, response.body);
       }
     }
 
@@ -161,28 +161,13 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
       logInfo(`Variant Inserted with ID: ${response.body.id}`);
       variant.id = response.body.id;
       variant.options = options;
+
+      createAttributeVariantValues(variant);
     }
   }
 
-  async function removeAttributeValues(aS, aT, aC) {
+  async function removeAttributeValues(aT, aC) {
     logInfo("Removing Attribute Values");
-    for (let i = 0; i < aS.length; i++) {
-      await request
-        .delete({
-          url: `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${
-            channelProfile.channelAuthValues.apiKey
-          }&_schema=default&_path=attributevalue-attributevalueselect/${aS[i].id}`,
-          json: true,
-          resolveWithFullResponse: true
-        })
-        .then(() => {
-          logInfo(`Attribute with ID ${aS[i].id} removed`);
-        })
-        .catch(err => {
-          throw err;
-        });
-    }
-
     for (let i = 0; i < aT.length; i++) {
       await request
         .delete({
@@ -218,42 +203,100 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
     }
   }
 
-  async function createAttributeValues(variants) {
-    logInfo(`Processing Attribute Values`);
-    let attributes = [];
-
-    variants.forEach(variant => {
-      variant.options.forEach(option => {
-        attributes.push(option);
-      });
-    });
-
-    attributes = _.uniqWith(attributes, _.isEqual);
-
-    for (let i = 0; i < attributes.length; i++) {
-      let vars = [];
-      variants.forEach(variant => {
-        variant.options.forEach(option => {
-          if (
-            attributes[i].attribute_id === option.attribute_id &&
-            attributes[i].attribute_option_id === option.attribute_option_id
-          ) {
-            vars.push({ id: variant.id });
-          }
-        });
-      });
-
+  async function createAttributeValues(attributeValues) {
+    for (let i = 0; i < attributeValues.length; i++) {
       let attributeValue = {
-        variants: vars,
-        attribute_option: {
-          id: attributes[i].attribute_option_id
-        },
         product: {
           product_id: payload.doc.product_id
         },
         attribute: {
-          id: attributes[i].attribute_id
+          id: attributeValues[i].attribute_id
         }
+      };
+
+      let attributeUrl = `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${
+        channelProfile.channelAuthValues.apiKey
+      }&_schema=default&_path=`;
+
+      switch (attributeValues[i].type) {
+        case "C":
+          attributeUrl = `${attributeUrl}attributevalue-attributevaluecheckbox/0`;
+          attributeValue.value = attributeValues[i].value;
+          break;
+
+        case "T":
+          attributeUrl = `${attributeUrl}attributevalue-attributevaluetext/0`;
+          attributeValue.translations = attributeValues[i].translations;
+          break;
+
+        default:
+          throw new Error(`An Attribute Value under the Product does not have a 'type' field.`);
+      }
+
+      let response = await request
+        .post({
+          url: attributeUrl,
+          body: attributeValue,
+          json: true,
+          resolveWithFullResponse: true
+        })
+        .catch(err => {
+          throw err;
+        });
+
+      logInfo(`Attribute of type '${attributeValues[i].type}' Value Inserted with ID: ${response.body.id}`);
+    }
+  }
+
+  async function updateAttributeVariantValues(variant, updatedVariant) {
+    for (let i = 0; i < updatedVariant.attributeValueS.length; i++) {
+      let url = `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${
+        channelProfile.channelAuthValues.apiKey
+      }&_schema=default&_path=attributevalue-attributevalueselect/${updatedVariant.attributeValueS[i].id}`;
+
+      let attributeResponse = await request.get({ url: url, json: true, resolveWithFullResponse: true }).catch(err => {
+        throw err;
+      });
+
+      let attributeValue = {
+        variants: [{ id: variant.id }],
+        id: attributeResponse.body.id,
+        product: {
+          product_id: attributeResponse.body.product.product_id
+        }
+      };
+
+      variant.options.forEach(option => {
+        if (
+          option.attribute_id === attributeResponse.body.attribute.id &&
+          attributeResponse.body.attribute_option.id === option.attribute_option_id
+        ) {
+          attributeValue.attribute_option = { id: option.attribute_option_id };
+          attributeValue.attribute = { id: option.attribute_id };
+        }
+      });
+
+      let response = await request
+        .put({ url: url, body: attributeValue, json: true, resolveWithFullResponse: true })
+        .catch(err => {
+          throw err;
+        });
+
+      logInfo(`Attribute Value Updated with ID: ${response.body.id}`);
+    }
+  }
+
+  async function createAttributeVariantValues(variant) {
+    logInfo(`Processing Attribute Values`);
+
+    variant.options.forEach(async option => {
+      let attributeValue = {
+        variants: [{ id: variant.id }],
+        product: {
+          product_id: variant.product.product_id
+        },
+        attribute_option: { id: option.attribute_option_id },
+        attribute: { id: option.attribute_id }
       };
 
       let response = await request
@@ -270,7 +313,7 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
         });
 
       logInfo(`Attribute Value Inserted with ID: ${response.body.id}`);
-    }
+    });
   }
 
   async function buildResponse(response) {
@@ -280,7 +323,6 @@ let UpdateProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
     if (response.statusCode === 200 && response.body) {
       out.payload = {
         doc: response.body,
-        productRemoteID: response.body.product_id,
         productBusinessReference: nc.extractBusinessReferences(channelProfile.productBusinessReferences, response.body)
       };
 

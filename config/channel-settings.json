@@ -114,7 +114,90 @@
         "referenceLocation": { "productBusinessReferences": ["sku"] },
         "remoteID": "product_id",
         "businessReferences": ["sku"],
-        "children": []
+        "children": [
+          {
+            "name": "PRODUCTPRICING",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          },
+          {
+            "name": "PRODUCTQUANTITY",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          },
+          {
+            "name": "variant",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "PUT PRODUCTPRICING",
+      "description": "PUT PRODUCTPRICING",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCTPRICING",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "canUpdateProductPricingFlag": true
+        },
+        "configView": [],
+        "configModel": {
+          "required": ["canUpdateProductPricingFlag"],
+          "properties": {
+            "canUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT ProductPricing, canUpdateProductPricingFlag"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": { "productPricingBusinessReferences": ["sku"] },
+        "remoteID": "id",
+        "businessReferences": ["sku"]
+      }
+    },
+    {
+      "name": "PUT PRODUCTQUANTITY",
+      "description": "PUT PRODUCTQUANTITY",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCTQUANTITY",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "canUpdateProductQuantityFlag": true
+        },
+        "configView": [],
+        "configModel": {
+          "required": ["canUpdateProductQuantityFlag"],
+          "properties": {
+            "canUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT ProductQuantity, canUpdateProductQuantityFlag"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": { "productQuantityBusinessReferences": ["sku"] },
+        "remoteID": "id",
+        "businessReferences": ["sku"]
       }
     },
     {
