@@ -165,8 +165,8 @@
       "documentDef": {
         "schema": {},
         "referenceLocation": {
-          "fulfillmentBusinessReferences": [""],
-          "salesOrderBusinessReferences": ["orderNumber"]
+          "fulfillmentBusinessReferences": ["value"],
+          "salesOrderBusinessReferences": ["order.orderNumber"]
         }
       }
     }
