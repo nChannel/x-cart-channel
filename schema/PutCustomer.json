@@ -199,6 +199,20 @@
             "isWork": {
               "type": "boolean"
             },
+            "profile": {
+              "description": "Reference to the profile (customer) that this address belongs to",
+              "type": "object",
+              "required": [
+                "profile_id"
+              ],
+              "properties": {
+                "profile_id": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "title": "Profile"
+            },
             "addressFields": {
               "type": "array",
               "items": {
