@@ -1034,11 +1034,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 237
+                      "attribute_option_id": 237,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 222
+                      "attribute_option_id": 222,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1053,11 +1055,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 237
+                      "attribute_option_id": 237,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 223
+                      "attribute_option_id": 223,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1072,11 +1076,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 238
+                      "attribute_option_id": 238,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 222
+                      "attribute_option_id": 222,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1092,11 +1098,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 238
+                      "attribute_option_id": 238,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 223
+                      "attribute_option_id": 223,
+                      "type": "S"
                     }
                   ]
                 }
@@ -1129,6 +1137,7 @@
                   "cleanURL": "testing-item.html"
                 }
               ],
+              "attributeValues": [],
               "translations": [
                 {
                   "name": "Testing item",
@@ -1934,6 +1943,10 @@
                   "cleanURL": "testing-item.html"
                 }
               ],
+              "attributeValues": [],
+              "attributeValueT": [],
+              "attributeValueS": [],
+              "attributeValueC": [],
               "translations": [
                 {
                   "name": "Testing item",
@@ -1990,17 +2003,7 @@
                     "defaultAmount": true,
                     "weight": 0,
                     "defaultWeight": true,
-                    "sku": "TEST-SKU-33",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 237
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 223
-                      }
-                    ]
+                    "sku": "TEST-SKU-33"
                   },
                   {
                     "id": 412,
@@ -2010,17 +2013,7 @@
                     "defaultAmount": true,
                     "weight": 0,
                     "defaultWeight": true,
-                    "sku": "TEST-SKU-44",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 238
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 222
-                      }
-                    ]
+                    "sku": "TEST-SKU-44"
                   },
                   {
                     "id": 413,
@@ -2031,17 +2024,7 @@
                     "weight": 0,
                     "defaultWeight": true,
                     "sku": "TEST-SKU-55",
-                    "variant_id": "TEST-SKU-b-1",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 238
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 223
-                      }
-                    ]
+                    "variant_id": "TEST-SKU-b-1"
                   }
                 ],
                 "productClass": {
@@ -2050,44 +2033,7 @@
                 },
                 "attributeValueC": [],
                 "attributeValueT": [],
-                "attributeValueS": [
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 509
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 511
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 512
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 513
-                  }
-                ]
+                "attributeValueS": []
               }
             },
             {
@@ -2132,78 +2078,6 @@
               "responsePayload": {
                 "id": 413,
                 "sku": "TEST-SKU-55"
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/509",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/511",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/512",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/513",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 772
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 773
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 774
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 775
               }
             }
           ],
@@ -2531,58 +2405,65 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 155,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 401,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -2590,19 +2471,22 @@
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -2610,7 +2494,7 @@
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         }
       ]
@@ -2621,58 +2505,65 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 155,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 401,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -2680,19 +2571,22 @@
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -2700,7 +2594,7 @@
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         }
       ]
