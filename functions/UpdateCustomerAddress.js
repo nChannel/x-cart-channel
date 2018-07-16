@@ -28,7 +28,9 @@ function UpdateCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
   async function updateAddress() {
     if (!stub.payload.doc.address_id && stub.payload.customerAddressRemoteID) {
       stub.payload.doc.address_id = stub.payload.customerAddressRemoteID;
-    } else {
+    }
+
+    if (!stub.payload.doc.address_id) {
       throw new Error("address_id (customerAddressRemoteID) is a required property for updating an existing customer address.");
     }
 

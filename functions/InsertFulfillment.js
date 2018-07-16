@@ -32,7 +32,9 @@ function InsertFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
 
     if (!stub.payload.doc.order.order_id && stub.payload.salesOrderRemoteID) {
       stub.payload.doc.order.order_id = stub.payload.salesOrderRemoteID;
-    } else {
+    }
+
+    if (!stub.payload.doc.order.order_id) {
       throw new Error("order.order_id (salesOrderRemoteID) is a required property for inserting a new tracking number.");
     }
 

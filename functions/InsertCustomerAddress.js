@@ -32,7 +32,9 @@ function InsertCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
 
     if (!stub.payload.doc.profile.profile_id && stub.payload.customerRemoteID) {
       stub.payload.doc.profile.profile_id = stub.payload.customerRemoteID;
-    } else {
+    }
+
+    if (!stub.payload.doc.profile.profile_id) {
       throw new Error("profile.profile_id (customerRemoteID) is a required property for inserting a new customer address.");
     }
 

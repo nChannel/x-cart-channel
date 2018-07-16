@@ -28,7 +28,9 @@ function UpdateFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
   async function updateTrackingNumber() {
     if (!stub.payload.doc.tracking_id && stub.payload.fulfillmentRemoteID) {
       stub.payload.doc.tracking_id = stub.payload.fulfillmentRemoteID;
-    } else {
+    }
+
+    if (!stub.payload.doc.tracking_id) {
       throw new Error("tracking_id (fulfillmentRemoteID) is a required property for updating an existing tracking number.");
     }
 

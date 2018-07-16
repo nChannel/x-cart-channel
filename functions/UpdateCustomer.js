@@ -28,14 +28,16 @@ function UpdateCustomer(ncUtil, channelProfile, flowContext, payload, callback) 
   async function updateProfile() {
     if (!stub.payload.doc.profile_id && stub.payload.customerRemoteID) {
       stub.payload.doc.profile_id = stub.payload.customerRemoteID;
-    } else {
+    }
+
+    if (!stub.payload.doc.profile_id) {
       throw new Error("profile_id (customerRemoteID) is a required property for updating an existing customer.");
     }
 
     const query = {
       target: "RESTAPI",
       _key: stub.channelProfile.channelAuthValues.apiKey,
-      _path: `address/${stub.payload.doc.profile_id}`
+      _path: `profile/${stub.payload.doc.profile_id}`
     };
 
     let requestBody = JSON.parse(JSON.stringify(stub.payload.doc));
