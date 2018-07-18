@@ -248,8 +248,172 @@
       "documentDef": {
         "schema": {},
         "referenceLocation": {
-          "fulfillmentBusinessReferences": [""],
-          "salesOrderBusinessReferences": ["orderNumber"]
+          "fulfillmentBusinessReferences": ["value"],
+          "salesOrderBusinessReferences": ["order.orderNumber"]
+        }
+      }
+    },
+    {
+      "name": "PUT CUSTOMER",
+      "description": "PUT CUSTOMER",
+      "channelVerb": "PUT",
+      "channelNoun": "CUSTOMER",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configModel": {
+          "type": "object",
+          "properties": {
+            "doPutCustomerAddressesFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doPutCustomerAddressesFlag"
+            },
+            "canInsertCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerFlag"
+            },
+            "canInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerAddressFlag"
+            },
+            "canInsertCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerContactFlag"
+            },
+            "canUpdateCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerFlag"
+            },
+            "canUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerAddressFlag"
+            },
+            "canUpdateCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerContactFlag"
+            },
+            "doInsertCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerFlag"
+            },
+            "doInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerAddressFlag"
+            },
+            "doInsertCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerContactFlag"
+            },
+            "doUpdateCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerFlag"
+            },
+            "doUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerAddressFlag"
+            },
+            "doUpdateCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerContactFlag"
+            }
+          },
+          "required": [
+            "doPutCustomerAddressesFlag",
+            "canInsertCustomerFlag",
+            "canInsertCustomerAddressFlag",
+            "canInsertCustomerContactFlag",
+            "canUpdateCustomerFlag",
+            "canUpdateCustomerAddressFlag",
+            "canUpdateCustomerContactFlag",
+            "doInsertCustomerFlag",
+            "doInsertCustomerAddressFlag",
+            "doInsertCustomerContactFlag",
+            "doUpdateCustomerFlag",
+            "doUpdateCustomerAddressFlag",
+            "doUpdateCustomerContactFlag"
+          ]
+        },
+        "configView": [
+          "doPutCustomerAddressesFlag",
+          "doInsertCustomerFlag",
+          "doInsertCustomerAddressFlag",
+          "doUpdateCustomerFlag",
+          "doUpdateCustomerAddressFlag"
+        ],
+        "configValues": {
+          "doPutCustomerAddressesFlag": true,
+          "canInsertCustomerFlag": true,
+          "canInsertCustomerAddressFlag": true,
+          "canInsertCustomerContactFlag": false,
+          "canUpdateCustomerFlag": true,
+          "canUpdateCustomerAddressFlag": true,
+          "canUpdateCustomerContactFlag": false,
+          "doInsertCustomerFlag": true,
+          "doInsertCustomerAddressFlag": true,
+          "doInsertCustomerContactFlag": false,
+          "doUpdateCustomerFlag": true,
+          "doUpdateCustomerAddressFlag": true,
+          "doUpdateCustomerContactFlag": false
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": {
+          "customerBusinessReferences": ["login"]
+        }
+      }
+    },
+    {
+      "name": "PUT CUSTOMERADDRESS",
+      "description": "PUT CUSTOMERADDRESS",
+      "channelVerb": "PUT",
+      "channelNoun": "CUSTOMERADDRESS",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configModel": {
+          "type": "object",
+          "properties": {
+            "canInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, canInsertCustomerAddressFlag"
+            },
+            "canUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, canUpdateCustomerAddressFlag"
+            },
+            "doInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, doInsertCustomerAddressFlag"
+            },
+            "doUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, doUpdateCustomerAddressFlag"
+            }
+          },
+          "required": [
+            "canInsertCustomerAddressFlag",
+            "canUpdateCustomerAddressFlag",
+            "doInsertCustomerAddressFlag",
+            "doUpdateCustomerAddressFlag"
+          ]
+        },
+        "configView": ["doInsertCustomerAddressFlag", "doUpdateCustomerAddressFlag"],
+        "configValues": {
+          "canInsertCustomerAddressFlag": true,
+          "canUpdateCustomerAddressFlag": true,
+          "doInsertCustomerAddressFlag": true,
+          "doUpdateCustomerAddressFlag": true
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": {
+          "customerAddressBusinessReferences": ["$join(addressFields.value)"]
         }
       }
     }

@@ -606,57 +606,198 @@
           "ncStatusCode": 200,
           "payload": {
             "doc": {
-              "Addresses": [{}]
+              "socialLoginProvider": null,
+              "socialLoginId": null,
+              "gaClientId": "",
+              "default_card_id": 0,
+              "pending_zero_auth": "",
+              "pending_zero_auth_txn_id": "",
+              "pending_zero_auth_status": "",
+              "pending_zero_auth_interface": "",
+              "braintree_customer_id": "",
+              "saveCardBoxChecked": false,
+              "conciergeUserId": null,
+              "profile_id": 17,
+              "login": "testuser@thekerseys.org",
+              "password":
+                "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+              "password_hint": "",
+              "password_hint_answer": "",
+              "passwordResetKey": "",
+              "passwordResetKeyDate": 0,
+              "access_level": 0,
+              "cms_profile_id": 0,
+              "cms_name": "",
+              "added": 1530323144,
+              "first_login": 0,
+              "last_login": 0,
+              "status": "E",
+              "statusComment": "",
+              "referer": "Created by administrator (admin@mail.thekerseys.org)",
+              "language": "en",
+              "last_shipping_id": 0,
+              "last_payment_id": 0,
+              "anonymous": false,
+              "forceChangePassword": false,
+              "dateOfLoginAttempt": 0,
+              "countOfLoginAttempts": 0,
+              "searchFakeField":
+                "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+              "xcPendingExport": false,
+              "lastCheckoutEmail": "",
+              "mail_chimp_lists": [],
+              "mail_chimp_interests": [],
+              "mail_chimp_segments": [],
+              "conversations": [],
+              "order": null,
+              "event": [],
+              "membership": {
+                "membership_id": 1
+              },
+              "pending_membership": {
+                "membership_id": 1
+              },
+              "addresses": [
+                {
+                  "is_billing": true,
+                  "is_shipping": true,
+                  "isWork": false,
+                  "address_id": 73,
+                  "address_type": "R",
+                  "addressFields": [
+                    {
+                      "id": 510,
+                      "value": "First1",
+                      "addressField": {
+                        "id": 2
+                      }
+                    },
+                    {
+                      "id": 511,
+                      "value": "Last1",
+                      "addressField": {
+                        "id": 3
+                      }
+                    },
+                    {
+                      "id": 512,
+                      "value": "1 Two Lane",
+                      "addressField": {
+                        "id": 4
+                      }
+                    },
+                    {
+                      "id": 513,
+                      "value": "Columbia",
+                      "addressField": {
+                        "id": 5
+                      }
+                    },
+                    {
+                      "id": 514,
+                      "value": "29212",
+                      "addressField": {
+                        "id": 9
+                      }
+                    },
+                    {
+                      "id": 515,
+                      "value": "3256547854",
+                      "addressField": {
+                        "id": 10
+                      }
+                    }
+                  ],
+                  "state": {
+                    "state_id": 600
+                  },
+                  "country": {
+                    "code": "US"
+                  }
+                }
+              ],
+              "roles": [
+                {
+                  "id": 2
+                }
+              ]
             }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 204,
-          "payload": {
-            "doc": {}
-          },
-          "baseUri": "http://localhost/admin.php",
-          "defaultHeaders": {},
-          "links": [],
-          "channelProfile": {
-            "customerBusinessReferences": ["email"]
-          }
-        }
-      ]
-    },
-    {
-      "functionName": "ExtractCustomerContactsFromCustomer",
-      "tests": [
-        {
-          "ncStatusCode": 200,
           "payload": {
             "doc": {
-              "ContactMethods": [{}]
+              "socialLoginProvider": null,
+              "socialLoginId": null,
+              "gaClientId": "",
+              "default_card_id": 0,
+              "pending_zero_auth": "",
+              "pending_zero_auth_txn_id": "",
+              "pending_zero_auth_status": "",
+              "pending_zero_auth_interface": "",
+              "braintree_customer_id": "",
+              "saveCardBoxChecked": false,
+              "conciergeUserId": null,
+              "profile_id": 17,
+              "login": "testuser@thekerseys.org",
+              "password":
+                "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+              "password_hint": "",
+              "password_hint_answer": "",
+              "passwordResetKey": "",
+              "passwordResetKeyDate": 0,
+              "access_level": 0,
+              "cms_profile_id": 0,
+              "cms_name": "",
+              "added": 1530323144,
+              "first_login": 0,
+              "last_login": 0,
+              "status": "E",
+              "statusComment": "",
+              "referer": "Created by administrator (admin@mail.thekerseys.org)",
+              "language": "en",
+              "last_shipping_id": 0,
+              "last_payment_id": 0,
+              "anonymous": false,
+              "forceChangePassword": false,
+              "dateOfLoginAttempt": 0,
+              "countOfLoginAttempts": 0,
+              "searchFakeField":
+                "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+              "xcPendingExport": false,
+              "lastCheckoutEmail": "",
+              "mail_chimp_lists": [],
+              "mail_chimp_interests": [],
+              "mail_chimp_segments": [],
+              "conversations": [],
+              "order": null,
+              "event": [],
+              "membership": {
+                "membership_id": 1
+              },
+              "pending_membership": {
+                "membership_id": 1
+              },
+              "addresses": [],
+              "roles": [
+                {
+                  "id": 2
+                }
+              ]
             }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
-          }
-        },
-        {
-          "ncStatusCode": 204,
-          "payload": {
-            "doc": {}
-          },
-          "baseUri": "http://localhost/admin.php",
-          "defaultHeaders": {},
-          "links": [],
-          "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         }
       ]
@@ -667,58 +808,175 @@
         {
           "ncStatusCode": 201,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com"
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 201,
+              "statusCode": 200,
               "responsePayload": {
-                "customer": {
-                  "id": 1073339459,
-                  "email": "derek.boytim@nchannel.com"
-                }
+                "socialLoginProvider": null,
+                "socialLoginId": null,
+                "gaClientId": "",
+                "default_card_id": 0,
+                "pending_zero_auth": "",
+                "pending_zero_auth_txn_id": "",
+                "pending_zero_auth_status": "",
+                "pending_zero_auth_interface": "",
+                "braintree_customer_id": "",
+                "saveCardBoxChecked": false,
+                "conciergeUserId": null,
+                "profile_id": 17,
+                "login": "derek.boytim@nchannel.com",
+                "password":
+                  "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                "password_hint": "",
+                "password_hint_answer": "",
+                "passwordResetKey": "",
+                "passwordResetKeyDate": 0,
+                "access_level": 0,
+                "cms_profile_id": 0,
+                "cms_name": "",
+                "added": 1530323144,
+                "first_login": 0,
+                "last_login": 0,
+                "status": "E",
+                "statusComment": "",
+                "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                "language": "en",
+                "last_shipping_id": 0,
+                "last_payment_id": 0,
+                "anonymous": false,
+                "forceChangePassword": false,
+                "dateOfLoginAttempt": 0,
+                "countOfLoginAttempts": 0,
+                "searchFakeField":
+                  "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+                "xcPendingExport": false,
+                "lastCheckoutEmail": "",
+                "mail_chimp_lists": [],
+                "mail_chimp_interests": [],
+                "mail_chimp_segments": [],
+                "conversations": [],
+                "order": null,
+                "event": [],
+                "membership": {
+                  "membership_id": 1
+                },
+                "pending_membership": {
+                  "membership_id": 1
+                },
+                "addresses": [
+                  {
+                    "is_billing": true,
+                    "is_shipping": true,
+                    "isWork": false,
+                    "address_id": 73,
+                    "address_type": "R",
+                    "addressFields": [
+                      {
+                        "id": 510,
+                        "value": "First1",
+                        "addressField": {
+                          "id": 2
+                        }
+                      },
+                      {
+                        "id": 511,
+                        "value": "Last1",
+                        "addressField": {
+                          "id": 3
+                        }
+                      },
+                      {
+                        "id": 512,
+                        "value": "1 Two Lane",
+                        "addressField": {
+                          "id": 4
+                        }
+                      },
+                      {
+                        "id": 513,
+                        "value": "Columbia",
+                        "addressField": {
+                          "id": 5
+                        }
+                      },
+                      {
+                        "id": 514,
+                        "value": "29212",
+                        "addressField": {
+                          "id": 9
+                        }
+                      },
+                      {
+                        "id": 515,
+                        "value": "3256547854",
+                        "addressField": {
+                          "id": 10
+                        }
+                      }
+                    ],
+                    "state": {
+                      "state_id": 600
+                    },
+                    "country": {
+                      "code": "US"
+                    }
+                  }
+                ],
+                "roles": [
+                  {
+                    "id": 2
+                  }
+                ]
               }
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com"
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 404,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com"
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -726,19 +984,21 @@
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com"
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -746,7 +1006,396 @@
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
+          }
+        }
+      ]
+    },
+    {
+      "functionName": "InsertCustomerAddress",
+      "tests": [
+        {
+          "ncStatusCode": 201,
+          "payload": {
+            "doc": {
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "is_billing": true,
+                "is_shipping": true,
+                "isWork": false,
+                "address_id": 73,
+                "address_type": "R",
+                "addressFields": [
+                  {
+                    "id": 510,
+                    "value": "First1X"
+                  },
+                  {
+                    "id": 511,
+                    "value": "Last1"
+                  },
+                  {
+                    "id": 512,
+                    "value": "1 Two Lane"
+                  },
+                  {
+                    "id": 513,
+                    "value": "Columbia"
+                  },
+                  {
+                    "id": 514,
+                    "value": "29212"
+                  },
+                  {
+                    "id": 515,
+                    "value": "3256547854"
+                  },
+                  {
+                    "id": 516,
+                    "value": "US"
+                  },
+                  {
+                    "id": 517,
+                    "value": "600"
+                  },
+                  {
+                    "id": 518,
+                    "value": "South Carolina"
+                  }
+                ],
+                "profile": {
+                  "socialLoginProvider": null,
+                  "socialLoginId": null,
+                  "gaClientId": "",
+                  "default_card_id": 0,
+                  "pending_zero_auth": "",
+                  "pending_zero_auth_txn_id": "",
+                  "pending_zero_auth_status": "",
+                  "pending_zero_auth_interface": "",
+                  "braintree_customer_id": "",
+                  "saveCardBoxChecked": false,
+                  "conciergeUserId": null,
+                  "profile_id": 17,
+                  "login": "testuser@thekerseys.org",
+                  "password":
+                    "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                  "password_hint": "",
+                  "password_hint_answer": "",
+                  "passwordResetKey": "",
+                  "passwordResetKeyDate": 0,
+                  "access_level": 0,
+                  "cms_profile_id": 0,
+                  "cms_name": "",
+                  "added": 1530323144,
+                  "first_login": 0,
+                  "last_login": 0,
+                  "status": "E",
+                  "statusComment": "",
+                  "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                  "language": "en",
+                  "last_shipping_id": 0,
+                  "last_payment_id": 0,
+                  "anonymous": false,
+                  "forceChangePassword": false,
+                  "dateOfLoginAttempt": 0,
+                  "countOfLoginAttempts": 0,
+                  "searchFakeField":
+                    "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
+                  "xcPendingExport": false,
+                  "lastCheckoutEmail": ""
+                },
+                "state": {
+                  "state_id": 600,
+                  "state": "South Carolina",
+                  "code": "SC"
+                },
+                "country": {
+                  "code": "US",
+                  "id": 840,
+                  "code3": "USA",
+                  "enabled": true
+                }
+              }
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 400,
+          "payload": {
+            "doc": {
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 404,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 429,
+          "payload": {
+            "doc": {
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 429,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 500,
+          "payload": {
+            "doc": {
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F0",
+              "method": "POST",
+              "replyHeaders": {},
+              "statusCode": 500,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
           }
         }
       ]
@@ -757,57 +1406,79 @@
         {
           "ncStatusCode": 201,
           "payload": {
-            "doc": {}
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 201,
+              "statusCode": 200,
               "responsePayload": {
-                "fulfillment": {
-                  "id": 1073339459
+                "tracking_id": 11,
+                "value": "xyz",
+                "order": {
+                  "order_id": 6
                 }
               }
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["fulfillmentid"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F0",
               "method": "POST",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 404,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["fulfillmentid"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 429,
@@ -815,19 +1486,26 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["fulfillmentid"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F0",
               "method": "POST",
               "replyHeaders": {},
               "statusCode": 500,
@@ -835,7 +1513,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["fulfillmentid"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         }
       ]
@@ -1576,58 +2255,178 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com",
+              "profile_id": 17
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F17",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "customer": {
-                  "id": 1073339459,
-                  "email": "derek.boytim@nchannel.com"
-                }
+                "socialLoginProvider": null,
+                "socialLoginId": null,
+                "gaClientId": "",
+                "default_card_id": 0,
+                "pending_zero_auth": "",
+                "pending_zero_auth_txn_id": "",
+                "pending_zero_auth_status": "",
+                "pending_zero_auth_interface": "",
+                "braintree_customer_id": "",
+                "saveCardBoxChecked": false,
+                "conciergeUserId": null,
+                "profile_id": 17,
+                "login": "derek.boytim@nchannel.com",
+                "password":
+                  "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                "password_hint": "",
+                "password_hint_answer": "",
+                "passwordResetKey": "",
+                "passwordResetKeyDate": 0,
+                "access_level": 0,
+                "cms_profile_id": 0,
+                "cms_name": "",
+                "added": 1530323144,
+                "first_login": 0,
+                "last_login": 0,
+                "status": "E",
+                "statusComment": "",
+                "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                "language": "en",
+                "last_shipping_id": 0,
+                "last_payment_id": 0,
+                "anonymous": false,
+                "forceChangePassword": false,
+                "dateOfLoginAttempt": 0,
+                "countOfLoginAttempts": 0,
+                "searchFakeField":
+                  "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+                "xcPendingExport": false,
+                "lastCheckoutEmail": "",
+                "mail_chimp_lists": [],
+                "mail_chimp_interests": [],
+                "mail_chimp_segments": [],
+                "conversations": [],
+                "order": null,
+                "event": [],
+                "membership": {
+                  "membership_id": 1
+                },
+                "pending_membership": {
+                  "membership_id": 1
+                },
+                "addresses": [
+                  {
+                    "is_billing": true,
+                    "is_shipping": true,
+                    "isWork": false,
+                    "address_id": 73,
+                    "address_type": "R",
+                    "addressFields": [
+                      {
+                        "id": 510,
+                        "value": "First1",
+                        "addressField": {
+                          "id": 2
+                        }
+                      },
+                      {
+                        "id": 511,
+                        "value": "Last1",
+                        "addressField": {
+                          "id": 3
+                        }
+                      },
+                      {
+                        "id": 512,
+                        "value": "1 Two Lane",
+                        "addressField": {
+                          "id": 4
+                        }
+                      },
+                      {
+                        "id": 513,
+                        "value": "Columbia",
+                        "addressField": {
+                          "id": 5
+                        }
+                      },
+                      {
+                        "id": 514,
+                        "value": "29212",
+                        "addressField": {
+                          "id": 9
+                        }
+                      },
+                      {
+                        "id": 515,
+                        "value": "3256547854",
+                        "addressField": {
+                          "id": 10
+                        }
+                      }
+                    ],
+                    "state": {
+                      "state_id": 600
+                    },
+                    "country": {
+                      "code": "US"
+                    }
+                  }
+                ],
+                "roles": [
+                  {
+                    "id": 2
+                  }
+                ]
               }
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com",
+              "profile_id": 17
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F17",
               "method": "PUT",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 404,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com",
+              "profile_id": 17
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F17",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -1635,19 +2434,22 @@
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "login": "derek.boytim@nchannel.com",
+              "profile_id": 17
+            }
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=profile%2F17",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -1655,7 +2457,519 @@
             }
           ],
           "channelProfile": {
-            "customerBusinessReferences": ["email"]
+            "customerBusinessReferences": ["login"]
+          }
+        }
+      ]
+    },
+    {
+      "functionName": "UpdateCustomerAddress",
+      "tests": [
+        {
+          "ncStatusCode": 200,
+          "payload": {
+            "doc": {
+              "address_id": 73,
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F73",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "is_billing": true,
+                "is_shipping": true,
+                "isWork": false,
+                "address_id": 73,
+                "address_type": "R",
+                "addressFields": [
+                  {
+                    "id": 510,
+                    "value": "First1X"
+                  },
+                  {
+                    "id": 511,
+                    "value": "Last1"
+                  },
+                  {
+                    "id": 512,
+                    "value": "1 Two Lane"
+                  },
+                  {
+                    "id": 513,
+                    "value": "Columbia"
+                  },
+                  {
+                    "id": 514,
+                    "value": "29212"
+                  },
+                  {
+                    "id": 515,
+                    "value": "3256547854"
+                  },
+                  {
+                    "id": 516,
+                    "value": "US"
+                  },
+                  {
+                    "id": 517,
+                    "value": "600"
+                  },
+                  {
+                    "id": 518,
+                    "value": "South Carolina"
+                  }
+                ],
+                "profile": {
+                  "socialLoginProvider": null,
+                  "socialLoginId": null,
+                  "gaClientId": "",
+                  "default_card_id": 0,
+                  "pending_zero_auth": "",
+                  "pending_zero_auth_txn_id": "",
+                  "pending_zero_auth_status": "",
+                  "pending_zero_auth_interface": "",
+                  "braintree_customer_id": "",
+                  "saveCardBoxChecked": false,
+                  "conciergeUserId": null,
+                  "profile_id": 17,
+                  "login": "testuser@thekerseys.org",
+                  "password":
+                    "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                  "password_hint": "",
+                  "password_hint_answer": "",
+                  "passwordResetKey": "",
+                  "passwordResetKeyDate": 0,
+                  "access_level": 0,
+                  "cms_profile_id": 0,
+                  "cms_name": "",
+                  "added": 1530323144,
+                  "first_login": 0,
+                  "last_login": 0,
+                  "status": "E",
+                  "statusComment": "",
+                  "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                  "language": "en",
+                  "last_shipping_id": 0,
+                  "last_payment_id": 0,
+                  "anonymous": false,
+                  "forceChangePassword": false,
+                  "dateOfLoginAttempt": 0,
+                  "countOfLoginAttempts": 0,
+                  "searchFakeField":
+                    "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
+                  "xcPendingExport": false,
+                  "lastCheckoutEmail": ""
+                },
+                "state": {
+                  "state_id": 600,
+                  "state": "South Carolina",
+                  "code": "SC"
+                },
+                "country": {
+                  "code": "US",
+                  "id": 840,
+                  "code3": "USA",
+                  "enabled": true
+                }
+              }
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 400,
+          "payload": {
+            "doc": {
+              "address_id": 73,
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F73",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 404,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 429,
+          "payload": {
+            "doc": {
+              "address_id": 73,
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F73",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 429,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        },
+        {
+          "ncStatusCode": 500,
+          "payload": {
+            "doc": {
+              "address_id": 73,
+              "is_billing": true,
+              "is_shipping": true,
+              "isWork": false,
+              "address_type": "R",
+              "addressFields": [
+                {
+                  "value": "First1",
+                  "addressField": {
+                    "id": 2
+                  }
+                },
+                {
+                  "value": "Last1",
+                  "addressField": {
+                    "id": 3
+                  }
+                },
+                {
+                  "value": "1 Two Lane",
+                  "addressField": {
+                    "id": 4
+                  }
+                },
+                {
+                  "value": "Columbia",
+                  "addressField": {
+                    "id": 5
+                  }
+                },
+                {
+                  "value": "29212",
+                  "addressField": {
+                    "id": 9
+                  }
+                },
+                {
+                  "value": "3256547854",
+                  "addressField": {
+                    "id": 10
+                  }
+                }
+              ],
+              "profile": {
+                "profile_id": 17
+              },
+              "state": {
+                "state_id": 600
+              },
+              "country": {
+                "code": "US"
+              }
+            }
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=address%2F73",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 500,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "customerAddressBusinessReferences": ["$join(addressFields.value,'.')"]
+          }
+        }
+      ]
+    },
+    {
+      "functionName": "UpdateFulfillment",
+      "tests": [
+        {
+          "ncStatusCode": 200,
+          "payload": {
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "fulfillmentRemoteID": 6
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F6",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 200,
+              "responsePayload": {
+                "tracking_id": 6,
+                "value": "xyz",
+                "order": {
+                  "order_id": 6
+                }
+              }
+            }
+          ],
+          "channelProfile": {
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
+          }
+        },
+        {
+          "ncStatusCode": 400,
+          "payload": {
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "fulfillmentRemoteID": 6
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F6",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 404,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
+          }
+        },
+        {
+          "ncStatusCode": 429,
+          "payload": {
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "fulfillmentRemoteID": 6
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F6",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 429,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
+          }
+        },
+        {
+          "ncStatusCode": 500,
+          "payload": {
+            "doc": {
+              "value": "xyz",
+              "order": {
+                "order_id": 6
+              }
+            },
+            "fulfillmentRemoteID": 6
+          },
+          "baseUri": "http://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_path=ordertrackingnumber%2F6",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 500,
+              "responsePayload": {}
+            }
+          ],
+          "channelProfile": {
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         }
       ]

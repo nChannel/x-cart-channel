@@ -1,0 +1,65 @@
+{
+  "name": "X-Cart Put Fulfillment Schema",
+  "schemaDef": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1,
+    "properties": {
+      "tracking_id": {
+        "type": "integer"
+      },
+      "value": {
+        "type": "string"
+      },
+      "order": {
+        "type": "object",
+        "minProperties": 1,
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          },
+          "shipping_id": {
+            "type": "integer"
+          },
+          "tracking": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "adminNotes": {
+            "type": "string"
+          },
+          "paymentStatus": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false,
+            "title": "Order Status Payment"
+          },
+          "shippingStatus": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false,
+            "title": "Order Status Shipping"
+          }
+        },
+        "additionalProperties": false,
+        "title": "Order"
+      }
+    },
+    "additionalProperties": false,
+    "title": "Order Tracking Number"
+  },
+  "tags": ["X-Cart", "Put", "Fulfillment"],
+  "audit": {}
+}
