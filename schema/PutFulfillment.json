@@ -32,9 +32,7 @@
           },
           "paymentStatus": {
             "type": "object",
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "integer"
@@ -45,9 +43,7 @@
           },
           "shippingStatus": {
             "type": "object",
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "integer"
@@ -64,10 +60,6 @@
     "additionalProperties": false,
     "title": "Order Tracking Number"
   },
-  "tags": [
-    "X-Cart",
-    "Put",
-    "Fulfillment"
-  ],
+  "tags": ["X-Cart", "Put", "Fulfillment"],
   "audit": {}
 }

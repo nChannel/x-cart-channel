@@ -606,119 +606,121 @@
           "ncStatusCode": 200,
           "payload": {
             "doc": {
-	            "socialLoginProvider": null,
-	            "socialLoginId": null,
-	            "gaClientId": "",
-	            "default_card_id": 0,
-	            "pending_zero_auth": "",
-	            "pending_zero_auth_txn_id": "",
-	            "pending_zero_auth_status": "",
-	            "pending_zero_auth_interface": "",
-	            "braintree_customer_id": "",
-	            "saveCardBoxChecked": false,
-	            "conciergeUserId": null,
-	            "profile_id": 17,
-	            "login": "testuser@thekerseys.org",
-	            "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-	            "password_hint": "",
-	            "password_hint_answer": "",
-	            "passwordResetKey": "",
-	            "passwordResetKeyDate": 0,
-	            "access_level": 0,
-	            "cms_profile_id": 0,
-	            "cms_name": "",
-	            "added": 1530323144,
-	            "first_login": 0,
-	            "last_login": 0,
-	            "status": "E",
-	            "statusComment": "",
-	            "referer": "Created by administrator (admin@mail.thekerseys.org)",
-	            "language": "en",
-	            "last_shipping_id": 0,
-	            "last_payment_id": 0,
-	            "anonymous": false,
-	            "forceChangePassword": false,
-	            "dateOfLoginAttempt": 0,
-	            "countOfLoginAttempts": 0,
-	            "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
-	            "xcPendingExport": false,
-	            "lastCheckoutEmail": "",
-	            "mail_chimp_lists": [],
-	            "mail_chimp_interests": [],
-	            "mail_chimp_segments": [],
-	            "conversations": [],
-	            "order": null,
-	            "event": [],
-	            "membership": {
-		            "membership_id": 1
-	            },
-	            "pending_membership": {
-		            "membership_id": 1
-	            },
-	            "addresses": [
-		            {
-			            "is_billing": true,
-			            "is_shipping": true,
-			            "isWork": false,
-			            "address_id": 73,
-			            "address_type": "R",
-			            "addressFields": [
-				            {
-					            "id": 510,
-					            "value": "First1",
-					            "addressField": {
-						            "id": 2
-					            }
-				            },
-				            {
-					            "id": 511,
-					            "value": "Last1",
-					            "addressField": {
-						            "id": 3
-					            }
-				            },
-				            {
-					            "id": 512,
-					            "value": "1 Two Lane",
-					            "addressField": {
-						            "id": 4
-					            }
-				            },
-				            {
-					            "id": 513,
-					            "value": "Columbia",
-					            "addressField": {
-						            "id": 5
-					            }
-				            },
-				            {
-					            "id": 514,
-					            "value": "29212",
-					            "addressField": {
-						            "id": 9
-					            }
-				            },
-				            {
-					            "id": 515,
-					            "value": "3256547854",
-					            "addressField": {
-						            "id": 10
-					            }
-				            }
-			            ],
-			            "state": {
-				            "state_id": 600
-			            },
-			            "country": {
-				            "code": "US"
-			            }
-		            }
-	            ],
-	            "roles": [
-		            {
-			            "id": 2
-		            }
-	            ]
+              "socialLoginProvider": null,
+              "socialLoginId": null,
+              "gaClientId": "",
+              "default_card_id": 0,
+              "pending_zero_auth": "",
+              "pending_zero_auth_txn_id": "",
+              "pending_zero_auth_status": "",
+              "pending_zero_auth_interface": "",
+              "braintree_customer_id": "",
+              "saveCardBoxChecked": false,
+              "conciergeUserId": null,
+              "profile_id": 17,
+              "login": "testuser@thekerseys.org",
+              "password":
+                "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+              "password_hint": "",
+              "password_hint_answer": "",
+              "passwordResetKey": "",
+              "passwordResetKeyDate": 0,
+              "access_level": 0,
+              "cms_profile_id": 0,
+              "cms_name": "",
+              "added": 1530323144,
+              "first_login": 0,
+              "last_login": 0,
+              "status": "E",
+              "statusComment": "",
+              "referer": "Created by administrator (admin@mail.thekerseys.org)",
+              "language": "en",
+              "last_shipping_id": 0,
+              "last_payment_id": 0,
+              "anonymous": false,
+              "forceChangePassword": false,
+              "dateOfLoginAttempt": 0,
+              "countOfLoginAttempts": 0,
+              "searchFakeField":
+                "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+              "xcPendingExport": false,
+              "lastCheckoutEmail": "",
+              "mail_chimp_lists": [],
+              "mail_chimp_interests": [],
+              "mail_chimp_segments": [],
+              "conversations": [],
+              "order": null,
+              "event": [],
+              "membership": {
+                "membership_id": 1
+              },
+              "pending_membership": {
+                "membership_id": 1
+              },
+              "addresses": [
+                {
+                  "is_billing": true,
+                  "is_shipping": true,
+                  "isWork": false,
+                  "address_id": 73,
+                  "address_type": "R",
+                  "addressFields": [
+                    {
+                      "id": 510,
+                      "value": "First1",
+                      "addressField": {
+                        "id": 2
+                      }
+                    },
+                    {
+                      "id": 511,
+                      "value": "Last1",
+                      "addressField": {
+                        "id": 3
+                      }
+                    },
+                    {
+                      "id": 512,
+                      "value": "1 Two Lane",
+                      "addressField": {
+                        "id": 4
+                      }
+                    },
+                    {
+                      "id": 513,
+                      "value": "Columbia",
+                      "addressField": {
+                        "id": 5
+                      }
+                    },
+                    {
+                      "id": 514,
+                      "value": "29212",
+                      "addressField": {
+                        "id": 9
+                      }
+                    },
+                    {
+                      "id": 515,
+                      "value": "3256547854",
+                      "addressField": {
+                        "id": 10
+                      }
+                    }
+                  ],
+                  "state": {
+                    "state_id": 600
+                  },
+                  "country": {
+                    "code": "US"
+                  }
+                }
+              ],
+              "roles": [
+                {
+                  "id": 2
+                }
+              ]
             }
           },
           "baseUri": "http://localhost/admin.php",
@@ -732,61 +734,63 @@
           "ncStatusCode": 204,
           "payload": {
             "doc": {
-	            "socialLoginProvider": null,
-	            "socialLoginId": null,
-	            "gaClientId": "",
-	            "default_card_id": 0,
-	            "pending_zero_auth": "",
-	            "pending_zero_auth_txn_id": "",
-	            "pending_zero_auth_status": "",
-	            "pending_zero_auth_interface": "",
-	            "braintree_customer_id": "",
-	            "saveCardBoxChecked": false,
-	            "conciergeUserId": null,
-	            "profile_id": 17,
-	            "login": "testuser@thekerseys.org",
-	            "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-	            "password_hint": "",
-	            "password_hint_answer": "",
-	            "passwordResetKey": "",
-	            "passwordResetKeyDate": 0,
-	            "access_level": 0,
-	            "cms_profile_id": 0,
-	            "cms_name": "",
-	            "added": 1530323144,
-	            "first_login": 0,
-	            "last_login": 0,
-	            "status": "E",
-	            "statusComment": "",
-	            "referer": "Created by administrator (admin@mail.thekerseys.org)",
-	            "language": "en",
-	            "last_shipping_id": 0,
-	            "last_payment_id": 0,
-	            "anonymous": false,
-	            "forceChangePassword": false,
-	            "dateOfLoginAttempt": 0,
-	            "countOfLoginAttempts": 0,
-	            "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
-	            "xcPendingExport": false,
-	            "lastCheckoutEmail": "",
-	            "mail_chimp_lists": [],
-	            "mail_chimp_interests": [],
-	            "mail_chimp_segments": [],
-	            "conversations": [],
-	            "order": null,
-	            "event": [],
-	            "membership": {
-		            "membership_id": 1
-	            },
-	            "pending_membership": {
-		            "membership_id": 1
-	            },
-	            "addresses": [],
-	            "roles": [
-		            {
-			            "id": 2
-		            }
-	            ]
+              "socialLoginProvider": null,
+              "socialLoginId": null,
+              "gaClientId": "",
+              "default_card_id": 0,
+              "pending_zero_auth": "",
+              "pending_zero_auth_txn_id": "",
+              "pending_zero_auth_status": "",
+              "pending_zero_auth_interface": "",
+              "braintree_customer_id": "",
+              "saveCardBoxChecked": false,
+              "conciergeUserId": null,
+              "profile_id": 17,
+              "login": "testuser@thekerseys.org",
+              "password":
+                "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+              "password_hint": "",
+              "password_hint_answer": "",
+              "passwordResetKey": "",
+              "passwordResetKeyDate": 0,
+              "access_level": 0,
+              "cms_profile_id": 0,
+              "cms_name": "",
+              "added": 1530323144,
+              "first_login": 0,
+              "last_login": 0,
+              "status": "E",
+              "statusComment": "",
+              "referer": "Created by administrator (admin@mail.thekerseys.org)",
+              "language": "en",
+              "last_shipping_id": 0,
+              "last_payment_id": 0,
+              "anonymous": false,
+              "forceChangePassword": false,
+              "dateOfLoginAttempt": 0,
+              "countOfLoginAttempts": 0,
+              "searchFakeField":
+                "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+              "xcPendingExport": false,
+              "lastCheckoutEmail": "",
+              "mail_chimp_lists": [],
+              "mail_chimp_interests": [],
+              "mail_chimp_segments": [],
+              "conversations": [],
+              "order": null,
+              "event": [],
+              "membership": {
+                "membership_id": 1
+              },
+              "pending_membership": {
+                "membership_id": 1
+              },
+              "addresses": [],
+              "roles": [
+                {
+                  "id": 2
+                }
+              ]
             }
           },
           "baseUri": "http://localhost/admin.php",
@@ -817,119 +821,121 @@
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-	              "socialLoginProvider": null,
-	              "socialLoginId": null,
-	              "gaClientId": "",
-	              "default_card_id": 0,
-	              "pending_zero_auth": "",
-	              "pending_zero_auth_txn_id": "",
-	              "pending_zero_auth_status": "",
-	              "pending_zero_auth_interface": "",
-	              "braintree_customer_id": "",
-	              "saveCardBoxChecked": false,
-	              "conciergeUserId": null,
-	              "profile_id": 17,
-	              "login": "derek.boytim@nchannel.com",
-	              "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-	              "password_hint": "",
-	              "password_hint_answer": "",
-	              "passwordResetKey": "",
-	              "passwordResetKeyDate": 0,
-	              "access_level": 0,
-	              "cms_profile_id": 0,
-	              "cms_name": "",
-	              "added": 1530323144,
-	              "first_login": 0,
-	              "last_login": 0,
-	              "status": "E",
-	              "statusComment": "",
-	              "referer": "Created by administrator (admin@mail.thekerseys.org)",
-	              "language": "en",
-	              "last_shipping_id": 0,
-	              "last_payment_id": 0,
-	              "anonymous": false,
-	              "forceChangePassword": false,
-	              "dateOfLoginAttempt": 0,
-	              "countOfLoginAttempts": 0,
-	              "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
-	              "xcPendingExport": false,
-	              "lastCheckoutEmail": "",
-	              "mail_chimp_lists": [],
-	              "mail_chimp_interests": [],
-	              "mail_chimp_segments": [],
-	              "conversations": [],
-	              "order": null,
-	              "event": [],
-	              "membership": {
-		              "membership_id": 1
-	              },
-	              "pending_membership": {
-		              "membership_id": 1
-	              },
-	              "addresses": [
-		              {
-			              "is_billing": true,
-			              "is_shipping": true,
-			              "isWork": false,
-			              "address_id": 73,
-			              "address_type": "R",
-			              "addressFields": [
-				              {
-					              "id": 510,
-					              "value": "First1",
-					              "addressField": {
-						              "id": 2
-					              }
-				              },
-				              {
-					              "id": 511,
-					              "value": "Last1",
-					              "addressField": {
-						              "id": 3
-					              }
-				              },
-				              {
-					              "id": 512,
-					              "value": "1 Two Lane",
-					              "addressField": {
-						              "id": 4
-					              }
-				              },
-				              {
-					              "id": 513,
-					              "value": "Columbia",
-					              "addressField": {
-						              "id": 5
-					              }
-				              },
-				              {
-					              "id": 514,
-					              "value": "29212",
-					              "addressField": {
-						              "id": 9
-					              }
-				              },
-				              {
-					              "id": 515,
-					              "value": "3256547854",
-					              "addressField": {
-						              "id": 10
-					              }
-				              }
-			              ],
-			              "state": {
-				              "state_id": 600
-			              },
-			              "country": {
-				              "code": "US"
-			              }
-		              }
-	              ],
-	              "roles": [
-		              {
-			              "id": 2
-		              }
-	              ]
+                "socialLoginProvider": null,
+                "socialLoginId": null,
+                "gaClientId": "",
+                "default_card_id": 0,
+                "pending_zero_auth": "",
+                "pending_zero_auth_txn_id": "",
+                "pending_zero_auth_status": "",
+                "pending_zero_auth_interface": "",
+                "braintree_customer_id": "",
+                "saveCardBoxChecked": false,
+                "conciergeUserId": null,
+                "profile_id": 17,
+                "login": "derek.boytim@nchannel.com",
+                "password":
+                  "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                "password_hint": "",
+                "password_hint_answer": "",
+                "passwordResetKey": "",
+                "passwordResetKeyDate": 0,
+                "access_level": 0,
+                "cms_profile_id": 0,
+                "cms_name": "",
+                "added": 1530323144,
+                "first_login": 0,
+                "last_login": 0,
+                "status": "E",
+                "statusComment": "",
+                "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                "language": "en",
+                "last_shipping_id": 0,
+                "last_payment_id": 0,
+                "anonymous": false,
+                "forceChangePassword": false,
+                "dateOfLoginAttempt": 0,
+                "countOfLoginAttempts": 0,
+                "searchFakeField":
+                  "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+                "xcPendingExport": false,
+                "lastCheckoutEmail": "",
+                "mail_chimp_lists": [],
+                "mail_chimp_interests": [],
+                "mail_chimp_segments": [],
+                "conversations": [],
+                "order": null,
+                "event": [],
+                "membership": {
+                  "membership_id": 1
+                },
+                "pending_membership": {
+                  "membership_id": 1
+                },
+                "addresses": [
+                  {
+                    "is_billing": true,
+                    "is_shipping": true,
+                    "isWork": false,
+                    "address_id": 73,
+                    "address_type": "R",
+                    "addressFields": [
+                      {
+                        "id": 510,
+                        "value": "First1",
+                        "addressField": {
+                          "id": 2
+                        }
+                      },
+                      {
+                        "id": 511,
+                        "value": "Last1",
+                        "addressField": {
+                          "id": 3
+                        }
+                      },
+                      {
+                        "id": 512,
+                        "value": "1 Two Lane",
+                        "addressField": {
+                          "id": 4
+                        }
+                      },
+                      {
+                        "id": 513,
+                        "value": "Columbia",
+                        "addressField": {
+                          "id": 5
+                        }
+                      },
+                      {
+                        "id": 514,
+                        "value": "29212",
+                        "addressField": {
+                          "id": 9
+                        }
+                      },
+                      {
+                        "id": 515,
+                        "value": "3256547854",
+                        "addressField": {
+                          "id": 10
+                        }
+                      }
+                    ],
+                    "state": {
+                      "state_id": 600
+                    },
+                    "country": {
+                      "code": "US"
+                    }
+                  }
+                ],
+                "roles": [
+                  {
+                    "id": 2
+                  }
+                ]
               }
             }
           ],
@@ -1080,94 +1086,96 @@
                 "address_id": 73,
                 "address_type": "R",
                 "addressFields": [
-                    {
-                        "id": 510,
-                        "value": "First1X"
-                    },
-                    {
-                        "id": 511,
-                        "value": "Last1"
-                    },
-                    {
-                        "id": 512,
-                        "value": "1 Two Lane"
-                    },
-                    {
-                        "id": 513,
-                        "value": "Columbia"
-                    },
-                    {
-                        "id": 514,
-                        "value": "29212"
-                    },
-                    {
-                        "id": 515,
-                        "value": "3256547854"
-                    },
-                    {
-                        "id": 516,
-                        "value": "US"
-                    },
-                    {
-                        "id": 517,
-                        "value": "600"
-                    },
-                    {
-                        "id": 518,
-                        "value": "South Carolina"
-                    }
+                  {
+                    "id": 510,
+                    "value": "First1X"
+                  },
+                  {
+                    "id": 511,
+                    "value": "Last1"
+                  },
+                  {
+                    "id": 512,
+                    "value": "1 Two Lane"
+                  },
+                  {
+                    "id": 513,
+                    "value": "Columbia"
+                  },
+                  {
+                    "id": 514,
+                    "value": "29212"
+                  },
+                  {
+                    "id": 515,
+                    "value": "3256547854"
+                  },
+                  {
+                    "id": 516,
+                    "value": "US"
+                  },
+                  {
+                    "id": 517,
+                    "value": "600"
+                  },
+                  {
+                    "id": 518,
+                    "value": "South Carolina"
+                  }
                 ],
                 "profile": {
-                    "socialLoginProvider": null,
-                    "socialLoginId": null,
-                    "gaClientId": "",
-                    "default_card_id": 0,
-                    "pending_zero_auth": "",
-                    "pending_zero_auth_txn_id": "",
-                    "pending_zero_auth_status": "",
-                    "pending_zero_auth_interface": "",
-                    "braintree_customer_id": "",
-                    "saveCardBoxChecked": false,
-                    "conciergeUserId": null,
-                    "profile_id": 17,
-                    "login": "testuser@thekerseys.org",
-                    "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-                    "password_hint": "",
-                    "password_hint_answer": "",
-                    "passwordResetKey": "",
-                    "passwordResetKeyDate": 0,
-                    "access_level": 0,
-                    "cms_profile_id": 0,
-                    "cms_name": "",
-                    "added": 1530323144,
-                    "first_login": 0,
-                    "last_login": 0,
-                    "status": "E",
-                    "statusComment": "",
-                    "referer": "Created by administrator (admin@mail.thekerseys.org)",
-                    "language": "en",
-                    "last_shipping_id": 0,
-                    "last_payment_id": 0,
-                    "anonymous": false,
-                    "forceChangePassword": false,
-                    "dateOfLoginAttempt": 0,
-                    "countOfLoginAttempts": 0,
-                    "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
-                    "xcPendingExport": false,
-                    "lastCheckoutEmail": ""
+                  "socialLoginProvider": null,
+                  "socialLoginId": null,
+                  "gaClientId": "",
+                  "default_card_id": 0,
+                  "pending_zero_auth": "",
+                  "pending_zero_auth_txn_id": "",
+                  "pending_zero_auth_status": "",
+                  "pending_zero_auth_interface": "",
+                  "braintree_customer_id": "",
+                  "saveCardBoxChecked": false,
+                  "conciergeUserId": null,
+                  "profile_id": 17,
+                  "login": "testuser@thekerseys.org",
+                  "password":
+                    "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                  "password_hint": "",
+                  "password_hint_answer": "",
+                  "passwordResetKey": "",
+                  "passwordResetKeyDate": 0,
+                  "access_level": 0,
+                  "cms_profile_id": 0,
+                  "cms_name": "",
+                  "added": 1530323144,
+                  "first_login": 0,
+                  "last_login": 0,
+                  "status": "E",
+                  "statusComment": "",
+                  "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                  "language": "en",
+                  "last_shipping_id": 0,
+                  "last_payment_id": 0,
+                  "anonymous": false,
+                  "forceChangePassword": false,
+                  "dateOfLoginAttempt": 0,
+                  "countOfLoginAttempts": 0,
+                  "searchFakeField":
+                    "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
+                  "xcPendingExport": false,
+                  "lastCheckoutEmail": ""
                 },
                 "state": {
-                    "state_id": 600,
-                    "state": "South Carolina",
-                    "code": "SC"
+                  "state_id": 600,
+                  "state": "South Carolina",
+                  "code": "SC"
                 },
                 "country": {
-                    "code": "US",
-                    "id": 840,
-                    "code3": "USA",
-                    "enabled": true
+                  "code": "US",
+                  "id": 840,
+                  "code3": "USA",
+                  "enabled": true
                 }
-            }
+              }
             }
           ],
           "channelProfile": {
@@ -1404,7 +1412,7 @@
                 "order_id": 6
               }
             },
-            "salesOrderRemoteID":  6
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -1424,8 +1432,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -1437,7 +1445,7 @@
                 "order_id": 6
               }
             },
-            "salesOrderRemoteID":  6
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -1451,8 +1459,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -1464,7 +1472,7 @@
                 "order_id": 6
               }
             },
-            "salesOrderRemoteID":  6
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -1478,8 +1486,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -1491,7 +1499,7 @@
                 "order_id": 6
               }
             },
-            "salesOrderRemoteID":  6
+            "salesOrderRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -1505,8 +1513,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         }
       ]
@@ -1705,11 +1713,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 237
+                      "attribute_option_id": 237,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 222
+                      "attribute_option_id": 222,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1724,11 +1734,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 237
+                      "attribute_option_id": 237,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 223
+                      "attribute_option_id": 223,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1743,11 +1755,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 238
+                      "attribute_option_id": 238,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 222
+                      "attribute_option_id": 222,
+                      "type": "S"
                     }
                   ]
                 },
@@ -1763,11 +1777,13 @@
                   "options": [
                     {
                       "attribute_id": 103,
-                      "attribute_option_id": 238
+                      "attribute_option_id": 238,
+                      "type": "S"
                     },
                     {
                       "attribute_id": 90,
-                      "attribute_option_id": 223
+                      "attribute_option_id": 223,
+                      "type": "S"
                     }
                   ]
                 }
@@ -1800,6 +1816,7 @@
                   "cleanURL": "testing-item.html"
                 }
               ],
+              "attributeValues": [],
               "translations": [
                 {
                   "name": "Testing item",
@@ -2252,119 +2269,121 @@
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-	              "socialLoginProvider": null,
-	              "socialLoginId": null,
-	              "gaClientId": "",
-	              "default_card_id": 0,
-	              "pending_zero_auth": "",
-	              "pending_zero_auth_txn_id": "",
-	              "pending_zero_auth_status": "",
-	              "pending_zero_auth_interface": "",
-	              "braintree_customer_id": "",
-	              "saveCardBoxChecked": false,
-	              "conciergeUserId": null,
-	              "profile_id": 17,
-	              "login": "derek.boytim@nchannel.com",
-	              "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-	              "password_hint": "",
-	              "password_hint_answer": "",
-	              "passwordResetKey": "",
-	              "passwordResetKeyDate": 0,
-	              "access_level": 0,
-	              "cms_profile_id": 0,
-	              "cms_name": "",
-	              "added": 1530323144,
-	              "first_login": 0,
-	              "last_login": 0,
-	              "status": "E",
-	              "statusComment": "",
-	              "referer": "Created by administrator (admin@mail.thekerseys.org)",
-	              "language": "en",
-	              "last_shipping_id": 0,
-	              "last_payment_id": 0,
-	              "anonymous": false,
-	              "forceChangePassword": false,
-	              "dateOfLoginAttempt": 0,
-	              "countOfLoginAttempts": 0,
-	              "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
-	              "xcPendingExport": false,
-	              "lastCheckoutEmail": "",
-	              "mail_chimp_lists": [],
-	              "mail_chimp_interests": [],
-	              "mail_chimp_segments": [],
-	              "conversations": [],
-	              "order": null,
-	              "event": [],
-	              "membership": {
-		              "membership_id": 1
-	              },
-	              "pending_membership": {
-		              "membership_id": 1
-	              },
-	              "addresses": [
-		              {
-			              "is_billing": true,
-			              "is_shipping": true,
-			              "isWork": false,
-			              "address_id": 73,
-			              "address_type": "R",
-			              "addressFields": [
-				              {
-					              "id": 510,
-					              "value": "First1",
-					              "addressField": {
-						              "id": 2
-					              }
-				              },
-				              {
-					              "id": 511,
-					              "value": "Last1",
-					              "addressField": {
-						              "id": 3
-					              }
-				              },
-				              {
-					              "id": 512,
-					              "value": "1 Two Lane",
-					              "addressField": {
-						              "id": 4
-					              }
-				              },
-				              {
-					              "id": 513,
-					              "value": "Columbia",
-					              "addressField": {
-						              "id": 5
-					              }
-				              },
-				              {
-					              "id": 514,
-					              "value": "29212",
-					              "addressField": {
-						              "id": 9
-					              }
-				              },
-				              {
-					              "id": 515,
-					              "value": "3256547854",
-					              "addressField": {
-						              "id": 10
-					              }
-				              }
-			              ],
-			              "state": {
-				              "state_id": 600
-			              },
-			              "country": {
-				              "code": "US"
-			              }
-		              }
-	              ],
-	              "roles": [
-		              {
-			              "id": 2
-		              }
-	              ]
+                "socialLoginProvider": null,
+                "socialLoginId": null,
+                "gaClientId": "",
+                "default_card_id": 0,
+                "pending_zero_auth": "",
+                "pending_zero_auth_txn_id": "",
+                "pending_zero_auth_status": "",
+                "pending_zero_auth_interface": "",
+                "braintree_customer_id": "",
+                "saveCardBoxChecked": false,
+                "conciergeUserId": null,
+                "profile_id": 17,
+                "login": "derek.boytim@nchannel.com",
+                "password":
+                  "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                "password_hint": "",
+                "password_hint_answer": "",
+                "passwordResetKey": "",
+                "passwordResetKeyDate": 0,
+                "access_level": 0,
+                "cms_profile_id": 0,
+                "cms_name": "",
+                "added": 1530323144,
+                "first_login": 0,
+                "last_login": 0,
+                "status": "E",
+                "statusComment": "",
+                "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                "language": "en",
+                "last_shipping_id": 0,
+                "last_payment_id": 0,
+                "anonymous": false,
+                "forceChangePassword": false,
+                "dateOfLoginAttempt": 0,
+                "countOfLoginAttempts": 0,
+                "searchFakeField":
+                  "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;testuser@thekerseys.org",
+                "xcPendingExport": false,
+                "lastCheckoutEmail": "",
+                "mail_chimp_lists": [],
+                "mail_chimp_interests": [],
+                "mail_chimp_segments": [],
+                "conversations": [],
+                "order": null,
+                "event": [],
+                "membership": {
+                  "membership_id": 1
+                },
+                "pending_membership": {
+                  "membership_id": 1
+                },
+                "addresses": [
+                  {
+                    "is_billing": true,
+                    "is_shipping": true,
+                    "isWork": false,
+                    "address_id": 73,
+                    "address_type": "R",
+                    "addressFields": [
+                      {
+                        "id": 510,
+                        "value": "First1",
+                        "addressField": {
+                          "id": 2
+                        }
+                      },
+                      {
+                        "id": 511,
+                        "value": "Last1",
+                        "addressField": {
+                          "id": 3
+                        }
+                      },
+                      {
+                        "id": 512,
+                        "value": "1 Two Lane",
+                        "addressField": {
+                          "id": 4
+                        }
+                      },
+                      {
+                        "id": 513,
+                        "value": "Columbia",
+                        "addressField": {
+                          "id": 5
+                        }
+                      },
+                      {
+                        "id": 514,
+                        "value": "29212",
+                        "addressField": {
+                          "id": 9
+                        }
+                      },
+                      {
+                        "id": 515,
+                        "value": "3256547854",
+                        "addressField": {
+                          "id": 10
+                        }
+                      }
+                    ],
+                    "state": {
+                      "state_id": 600
+                    },
+                    "country": {
+                      "code": "US"
+                    }
+                  }
+                ],
+                "roles": [
+                  {
+                    "id": 2
+                  }
+                ]
               }
             }
           ],
@@ -2519,94 +2538,96 @@
                 "address_id": 73,
                 "address_type": "R",
                 "addressFields": [
-                    {
-                        "id": 510,
-                        "value": "First1X"
-                    },
-                    {
-                        "id": 511,
-                        "value": "Last1"
-                    },
-                    {
-                        "id": 512,
-                        "value": "1 Two Lane"
-                    },
-                    {
-                        "id": 513,
-                        "value": "Columbia"
-                    },
-                    {
-                        "id": 514,
-                        "value": "29212"
-                    },
-                    {
-                        "id": 515,
-                        "value": "3256547854"
-                    },
-                    {
-                        "id": 516,
-                        "value": "US"
-                    },
-                    {
-                        "id": 517,
-                        "value": "600"
-                    },
-                    {
-                        "id": 518,
-                        "value": "South Carolina"
-                    }
+                  {
+                    "id": 510,
+                    "value": "First1X"
+                  },
+                  {
+                    "id": 511,
+                    "value": "Last1"
+                  },
+                  {
+                    "id": 512,
+                    "value": "1 Two Lane"
+                  },
+                  {
+                    "id": 513,
+                    "value": "Columbia"
+                  },
+                  {
+                    "id": 514,
+                    "value": "29212"
+                  },
+                  {
+                    "id": 515,
+                    "value": "3256547854"
+                  },
+                  {
+                    "id": 516,
+                    "value": "US"
+                  },
+                  {
+                    "id": 517,
+                    "value": "600"
+                  },
+                  {
+                    "id": 518,
+                    "value": "South Carolina"
+                  }
                 ],
                 "profile": {
-                    "socialLoginProvider": null,
-                    "socialLoginId": null,
-                    "gaClientId": "",
-                    "default_card_id": 0,
-                    "pending_zero_auth": "",
-                    "pending_zero_auth_txn_id": "",
-                    "pending_zero_auth_status": "",
-                    "pending_zero_auth_interface": "",
-                    "braintree_customer_id": "",
-                    "saveCardBoxChecked": false,
-                    "conciergeUserId": null,
-                    "profile_id": 17,
-                    "login": "testuser@thekerseys.org",
-                    "password": "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
-                    "password_hint": "",
-                    "password_hint_answer": "",
-                    "passwordResetKey": "",
-                    "passwordResetKeyDate": 0,
-                    "access_level": 0,
-                    "cms_profile_id": 0,
-                    "cms_name": "",
-                    "added": 1530323144,
-                    "first_login": 0,
-                    "last_login": 0,
-                    "status": "E",
-                    "statusComment": "",
-                    "referer": "Created by administrator (admin@mail.thekerseys.org)",
-                    "language": "en",
-                    "last_shipping_id": 0,
-                    "last_payment_id": 0,
-                    "anonymous": false,
-                    "forceChangePassword": false,
-                    "dateOfLoginAttempt": 0,
-                    "countOfLoginAttempts": 0,
-                    "searchFakeField": "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
-                    "xcPendingExport": false,
-                    "lastCheckoutEmail": ""
+                  "socialLoginProvider": null,
+                  "socialLoginId": null,
+                  "gaClientId": "",
+                  "default_card_id": 0,
+                  "pending_zero_auth": "",
+                  "pending_zero_auth_txn_id": "",
+                  "pending_zero_auth_status": "",
+                  "pending_zero_auth_interface": "",
+                  "braintree_customer_id": "",
+                  "saveCardBoxChecked": false,
+                  "conciergeUserId": null,
+                  "profile_id": 17,
+                  "login": "testuser@thekerseys.org",
+                  "password":
+                    "SHA512:0abf416c69e701fa833e1dc428bc0154e6816ba1923a59091f8a78ae3023d009fec3b24af77177f213501004b82795984007e989c3e63d90fcb0e551a6aa918f",
+                  "password_hint": "",
+                  "password_hint_answer": "",
+                  "passwordResetKey": "",
+                  "passwordResetKeyDate": 0,
+                  "access_level": 0,
+                  "cms_profile_id": 0,
+                  "cms_name": "",
+                  "added": 1530323144,
+                  "first_login": 0,
+                  "last_login": 0,
+                  "status": "E",
+                  "statusComment": "",
+                  "referer": "Created by administrator (admin@mail.thekerseys.org)",
+                  "language": "en",
+                  "last_shipping_id": 0,
+                  "last_payment_id": 0,
+                  "anonymous": false,
+                  "forceChangePassword": false,
+                  "dateOfLoginAttempt": 0,
+                  "countOfLoginAttempts": 0,
+                  "searchFakeField":
+                    "First1X Last1 First1X;First2 Last2 First2;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;First1 Last1 First1;testuser@thekerseys.org",
+                  "xcPendingExport": false,
+                  "lastCheckoutEmail": ""
                 },
                 "state": {
-                    "state_id": 600,
-                    "state": "South Carolina",
-                    "code": "SC"
+                  "state_id": 600,
+                  "state": "South Carolina",
+                  "code": "SC"
                 },
                 "country": {
-                    "code": "US",
-                    "id": 840,
-                    "code3": "USA",
-                    "enabled": true
+                  "code": "US",
+                  "id": 840,
+                  "code3": "USA",
+                  "enabled": true
                 }
-            }
+              }
             }
           ],
           "channelProfile": {
@@ -2846,7 +2867,7 @@
                 "order_id": 6
               }
             },
-            "fulfillmentRemoteID":  6
+            "fulfillmentRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -2866,8 +2887,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -2879,7 +2900,7 @@
                 "order_id": 6
               }
             },
-            "fulfillmentRemoteID":  6
+            "fulfillmentRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -2893,8 +2914,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -2906,7 +2927,7 @@
                 "order_id": 6
               }
             },
-            "fulfillmentRemoteID":  6
+            "fulfillmentRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -2920,8 +2941,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         },
         {
@@ -2933,7 +2954,7 @@
                 "order_id": 6
               }
             },
-            "fulfillmentRemoteID":  6
+            "fulfillmentRemoteID": 6
           },
           "baseUri": "http://localhost/admin.php",
           "defaultHeaders": {},
@@ -2947,8 +2968,8 @@
             }
           ],
           "channelProfile": {
-            "fulfillmentBusinessReferences": ["order.order_id","value"],
-            "salesOrderBusinessReferences":  ["orderNumber"]
+            "fulfillmentBusinessReferences": ["order.order_id", "value"],
+            "salesOrderBusinessReferences": ["orderNumber"]
           }
         }
       ]
@@ -3236,6 +3257,10 @@
                   "cleanURL": "testing-item.html"
                 }
               ],
+              "attributeValues": [],
+              "attributeValueT": [],
+              "attributeValueS": [],
+              "attributeValueC": [],
               "translations": [
                 {
                   "name": "Testing item",
@@ -3292,17 +3317,7 @@
                     "defaultAmount": true,
                     "weight": 0,
                     "defaultWeight": true,
-                    "sku": "TEST-SKU-33",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 237
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 223
-                      }
-                    ]
+                    "sku": "TEST-SKU-33"
                   },
                   {
                     "id": 412,
@@ -3312,17 +3327,7 @@
                     "defaultAmount": true,
                     "weight": 0,
                     "defaultWeight": true,
-                    "sku": "TEST-SKU-44",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 238
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 222
-                      }
-                    ]
+                    "sku": "TEST-SKU-44"
                   },
                   {
                     "id": 413,
@@ -3333,17 +3338,7 @@
                     "weight": 0,
                     "defaultWeight": true,
                     "sku": "TEST-SKU-55",
-                    "variant_id": "TEST-SKU-b-1",
-                    "options": [
-                      {
-                        "attribute_id": 103,
-                        "attribute_option_id": 238
-                      },
-                      {
-                        "attribute_id": 90,
-                        "attribute_option_id": 223
-                      }
-                    ]
+                    "variant_id": "TEST-SKU-b-1"
                   }
                 ],
                 "productClass": {
@@ -3352,44 +3347,7 @@
                 },
                 "attributeValueC": [],
                 "attributeValueT": [],
-                "attributeValueS": [
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 509
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 511
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 512
-                  },
-                  {
-                    "position": 0,
-                    "priceModifier": 0,
-                    "priceModifierType": "p",
-                    "weightModifier": 0,
-                    "weightModifierType": "p",
-                    "defaultValue": false,
-                    "id": 513
-                  }
-                ]
+                "attributeValueS": []
               }
             },
             {
@@ -3434,78 +3392,6 @@
               "responsePayload": {
                 "id": 413,
                 "sku": "TEST-SKU-55"
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/509",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/511",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/512",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/513",
-              "method": "DELETE",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {}
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 772
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 773
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 774
-              }
-            },
-            {
-              "uri":
-                "?target=RESTAPI&_key=read-write-token&_schema=default&_path=attributevalue-attributevalueselect/0",
-              "method": "POST",
-              "replyHeaders": {},
-              "statusCode": 200,
-              "responsePayload": {
-                "id": 775
               }
             }
           ],
@@ -3833,58 +3719,65 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 155,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 401,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -3892,19 +3785,22 @@
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productPricingRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -3912,7 +3808,7 @@
             }
           ],
           "channelProfile": {
-            "productPricingBusinessReferences": ["productpricingid"]
+            "productPricingBusinessReferences": ["sku"]
           }
         }
       ]
@@ -3923,58 +3819,65 @@
         {
           "ncStatusCode": 200,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 200,
               "responsePayload": {
-                "product": {
-                  "id": 1073339459,
-                  "sku": "test"
-                }
+                "product_id": 155,
+                "sku": "TEST-SKU"
               }
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {
+              "price": 37.99
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
-              "statusCode": 400,
+              "statusCode": 401,
               "responsePayload": {}
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 429,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 429,
@@ -3982,19 +3885,22 @@
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         },
         {
           "ncStatusCode": 500,
           "payload": {
-            "doc": {}
+            "doc": {
+              "amount": 50
+            },
+            "productQuantityRemoteID": 155
           },
-          "baseUri": "http://localhost/admin.php",
+          "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
           "links": [
             {
-              "uri": "/",
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/155",
               "method": "PUT",
               "replyHeaders": {},
               "statusCode": 500,
@@ -4002,7 +3908,7 @@
             }
           ],
           "channelProfile": {
-            "productQuantityBusinessReferences": ["productquantityid"]
+            "productQuantityBusinessReferences": ["sku"]
           }
         }
       ]

@@ -31,7 +31,9 @@ function UpdateCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
     }
 
     if (!stub.payload.doc.address_id) {
-      throw new Error("address_id (customerAddressRemoteID) is a required property for updating an existing customer address.");
+      throw new Error(
+        "address_id (customerAddressRemoteID) is a required property for updating an existing customer address."
+      );
     }
 
     const query = {
@@ -41,7 +43,12 @@ function UpdateCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
     };
 
     logInfo(`Executing query: PUT ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.put({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: stub.payload.doc });
+    const response = await stub.request.put({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: stub.payload.doc
+    });
     return response;
   }
 
@@ -49,8 +56,10 @@ function UpdateCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
     stub.out.response.endpointStatusCode = response.statusCode;
     stub.out.response.endpointStatusMessage = response.message;
     stub.out.ncStatusCode = 200;
-    stub.out.payload.customerAddressBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.customerAddressBusinessReferences, response.body);
+    stub.out.payload.customerAddressBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.customerAddressBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

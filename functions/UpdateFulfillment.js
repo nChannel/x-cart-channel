@@ -1,6 +1,6 @@
 function UpdateFulfillment(ncUtil, channelProfile, flowContext, payload, callback) {
   const nc = require("../util/ncUtils");
-  const referenceLocations = ["fulfillmentBusinessReferences","salesOrderBusinessReferences"];
+  const referenceLocations = ["fulfillmentBusinessReferences", "salesOrderBusinessReferences"];
   const stub = new nc.Stub("UpdateFulfillment", referenceLocations, ...arguments);
   const qs = require("qs");
 
@@ -31,7 +31,9 @@ function UpdateFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
     }
 
     if (!stub.payload.doc.tracking_id) {
-      throw new Error("tracking_id (fulfillmentRemoteID) is a required property for updating an existing tracking number.");
+      throw new Error(
+        "tracking_id (fulfillmentRemoteID) is a required property for updating an existing tracking number."
+      );
     }
 
     const query = {
@@ -41,7 +43,12 @@ function UpdateFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
     };
 
     logInfo(`Executing query: PUT ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.put({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: stub.payload.doc });
+    const response = await stub.request.put({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: stub.payload.doc
+    });
     return response;
   }
 
@@ -49,8 +56,10 @@ function UpdateFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
     stub.out.response.endpointStatusCode = response.statusCode;
     stub.out.response.endpointStatusMessage = response.message;
     stub.out.ncStatusCode = 200;
-    stub.out.payload.fulfillmentBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.fulfillmentBusinessReferences, response.body);
+    stub.out.payload.fulfillmentBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.fulfillmentBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

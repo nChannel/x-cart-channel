@@ -11,10 +11,7 @@
       "address_type": {
         "description": "Residential/Commercial",
         "type": "string",
-        "enum": [
-          "R",
-          "C"
-        ]
+        "enum": ["R", "C"]
       },
       "is_billing": {
         "type": "boolean"
@@ -28,9 +25,7 @@
       "profile": {
         "description": "Reference to the profile (customer) that this address belongs to",
         "type": "object",
-        "required": [
-          "profile_id"
-        ],
+        "required": ["profile_id"],
         "properties": {
           "profile_id": {
             "type": "integer"
@@ -44,10 +39,7 @@
         "minItems": 1,
         "items": {
           "type": "object",
-          "required": [
-            "value",
-            "addressField"
-          ],
+          "required": ["value", "addressField"],
           "properties": {
             "id": {
               "type": "integer"
@@ -56,11 +48,10 @@
               "type": "string"
             },
             "addressField": {
-              "description": "Reference to the address field being created/updated (ie. FirstName, LastName, Street, etc.)",
+              "description":
+                "Reference to the address field being created/updated (ie. FirstName, LastName, Street, etc.)",
               "type": "object",
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -78,9 +69,7 @@
       },
       "state": {
         "type": "object",
-        "required": [
-          "state_id"
-        ],
+        "required": ["state_id"],
         "properties": {
           "state_id": {
             "type": "integer"
@@ -91,9 +80,7 @@
       },
       "country": {
         "type": "object",
-        "required": [
-          "code"
-        ],
+        "required": ["code"],
         "properties": {
           "code": {
             "type": "string"
@@ -106,11 +93,6 @@
     "additionalProperties": false,
     "title": "Address"
   },
-  "tags": [
-    "X-Cart",
-    "Put",
-    "Customer",
-    "Address"
-  ],
+  "tags": ["X-Cart", "Put", "Customer", "Address"],
   "audit": {}
 }

@@ -1,8 +1,9 @@
 "use strict";
 
-let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload, callback) {
+let CheckForProductMatrix = function(ncUtil, channelProfile, flowContext, payload, callback) {
   const request = require("request-promise");
   const jsonata = require("jsonata");
+  const _ = require("lodash");
   const nc = require("../util/ncUtils");
 
   let out = {
@@ -18,7 +19,7 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
   }
 
   validateFunction()
-    .then(updateProduct)
+    .then(queryProduct)
     .then(buildResponse)
     .catch(handleError)
     .then(() => callback(out))
@@ -64,7 +65,6 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
       invalidMsg = "channelProfile.productBusinessReferences is empty";
     else if (!payload) invalidMsg = "payload was not provided";
     else if (!payload.doc) invalidMsg = "payload.doc was not provided";
-    else if (!payload.productRemoteID) invalidMsg = "payload.productRemoteID was not provided";
 
     if (invalidMsg) {
       logError(invalidMsg);
@@ -74,21 +74,27 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
     logInfo("Function is valid.");
   }
 
-  async function updateProduct() {
+  async function queryProduct() {
+    let filters = {};
+    channelProfile.productBusinessReferences.forEach(businessReference => {
+      let value = nc.extractBusinessReferences([businessReference], payload.doc);
+      filters[`_cnd[${businessReference}]`] = value;
+    });
+
+    logInfo("Looking up Product");
+
     let response = await request
-      .put({
+      .get({
         url: `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${
           channelProfile.channelAuthValues.apiKey
-        }&_schema=default&_path=product/${payload.productRemoteID}`,
-        body: payload.doc,
+        }&_schema=default&_path=product`,
+        qs: filters,
         json: true,
         resolveWithFullResponse: true
       })
       .catch(err => {
         throw err;
       });
-
-    logInfo(`Product Updated with ID: ${response.body.product_id}`);
 
     return response;
   }
@@ -98,12 +104,21 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
     out.response.endpointStatusMessage = response.statusMessage;
 
     if (response.statusCode === 200 && response.body) {
-      out.payload = {
-        doc: response.body,
-        productBusinessReference: nc.extractBusinessReferences(channelProfile.productBusinessReferences, response.body)
-      };
-
-      out.ncStatusCode = 200;
+      if (response.body && response.body.length == 1) {
+        out.ncStatusCode = 200;
+        out.payload = {
+          productRemoteID: response.body[0].product_id,
+          productBusinessReference: nc.extractBusinessReferences(
+            channelProfile.productBusinessReferences,
+            response.body[0]
+          )
+        };
+      } else if (response.body.length > 1) {
+        out.ncStatusCode = 409;
+        out.payload.error = response.body;
+      } else {
+        out.ncStatusCode = 204;
+      }
     } else if (response.statusCode == 500) {
       out.ncStatusCode = 500;
       out.payload.error = response.body;
@@ -132,4 +147,4 @@ let UpdateProductSimple = function(ncUtil, channelProfile, flowContext, payload,
   }
 };
 
-module.exports.UpdateProductSimple = UpdateProductSimple;
+module.exports.CheckForProductMatrix = CheckForProductMatrix;

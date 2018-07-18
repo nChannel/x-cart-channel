@@ -1,0 +1,40 @@
+{
+  "name": "X-Cart Put Product Pricing",
+  "schemaDef": {
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+      "price": {
+        "$id": "/properties/price",
+        "type": "number"
+      },
+      "variants": {
+        "$id": "/properties/variants",
+        "type": "array",
+        "items": {
+          "$id": "/properties/variants/items",
+          "type": "object",
+          "properties": {
+            "id": {
+              "$id": "/properties/variants/items/properties/id",
+              "type": "number"
+            },
+            "price": {
+              "$id": "/properties/variants/items/properties/price",
+              "type": "number"
+            },
+            "defaultPrice": {
+              "$id": "/properties/variants/items/properties/defaultAmount",
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "additionalProperties": false
+  },
+  "tags": ["Put", "Product", "Pricing"],
+  "audit": {}
+}

@@ -1,6 +1,6 @@
 function InsertFulfillment(ncUtil, channelProfile, flowContext, payload, callback) {
   const nc = require("../util/ncUtils");
-  const referenceLocations = ["fulfillmentBusinessReferences","salesOrderBusinessReferences"];
+  const referenceLocations = ["fulfillmentBusinessReferences", "salesOrderBusinessReferences"];
   const stub = new nc.Stub("InsertFulfillment", referenceLocations, ...arguments);
   const qs = require("qs");
 
@@ -35,7 +35,9 @@ function InsertFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
     }
 
     if (!stub.payload.doc.order.order_id) {
-      throw new Error("order.order_id (salesOrderRemoteID) is a required property for inserting a new tracking number.");
+      throw new Error(
+        "order.order_id (salesOrderRemoteID) is a required property for inserting a new tracking number."
+      );
     }
 
     const query = {
@@ -43,9 +45,14 @@ function InsertFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
       _key: stub.channelProfile.channelAuthValues.apiKey,
       _path: "ordertrackingnumber/0"
     };
-    
+
     logInfo(`Executing query: POST ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.post({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: stub.payload.doc });
+    const response = await stub.request.post({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: stub.payload.doc
+    });
     return response;
   }
 
@@ -55,8 +62,10 @@ function InsertFulfillment(ncUtil, channelProfile, flowContext, payload, callbac
     stub.out.ncStatusCode = 201;
     stub.out.payload.fulfillmentRemoteID = response.body.tracking_id;
     stub.out.payload.salesOrderRemoteID = response.body.order.order_id;
-    stub.out.payload.fulfillmentBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.fulfillmentBusinessReferences, response.body);
+    stub.out.payload.fulfillmentBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.fulfillmentBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

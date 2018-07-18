@@ -35,7 +35,9 @@ function InsertCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
     }
 
     if (!stub.payload.doc.profile.profile_id) {
-      throw new Error("profile.profile_id (customerRemoteID) is a required property for inserting a new customer address.");
+      throw new Error(
+        "profile.profile_id (customerRemoteID) is a required property for inserting a new customer address."
+      );
     }
 
     const query = {
@@ -43,9 +45,14 @@ function InsertCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
       _key: stub.channelProfile.channelAuthValues.apiKey,
       _path: "address/0"
     };
-    
+
     logInfo(`Executing query: POST ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.post({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: stub.payload.doc });
+    const response = await stub.request.post({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: stub.payload.doc
+    });
     return response;
   }
 
@@ -54,8 +61,10 @@ function InsertCustomerAddress(ncUtil, channelProfile, flowContext, payload, cal
     stub.out.response.endpointStatusMessage = response.message;
     stub.out.ncStatusCode = 201;
     stub.out.payload.customerAddressRemoteID = response.body.address_id;
-    stub.out.payload.customerAddressBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.customerAddressBusinessReferences, response.body);
+    stub.out.payload.customerAddressBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.customerAddressBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

@@ -44,7 +44,12 @@ function UpdateCustomer(ncUtil, channelProfile, flowContext, payload, callback) 
     delete requestBody.addresses;
 
     logInfo(`Executing query: PUT ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.put({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: stub.payload.doc });
+    const response = await stub.request.put({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: stub.payload.doc
+    });
     return response;
   }
 
@@ -52,8 +57,10 @@ function UpdateCustomer(ncUtil, channelProfile, flowContext, payload, callback) 
     stub.out.response.endpointStatusCode = response.statusCode;
     stub.out.response.endpointStatusMessage = response.message;
     stub.out.ncStatusCode = 200;
-    stub.out.payload.customerBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.customerBusinessReferences, response.body);
+    stub.out.payload.customerBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.customerBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

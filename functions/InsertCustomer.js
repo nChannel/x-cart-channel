@@ -38,9 +38,14 @@ function InsertCustomer(ncUtil, channelProfile, flowContext, payload, callback) 
 
     let requestBody = JSON.parse(JSON.stringify(stub.payload.doc));
     delete requestBody.addresses;
-    
+
     logInfo(`Executing query: POST ${stub.getBaseUrl()}?${qs.stringify(query, { encode: false })}`);
-    const response = await stub.request.post({ uri: "", qsStringifyOptions: { options: { encode: false } }, qs: query, body: requestBody });
+    const response = await stub.request.post({
+      uri: "",
+      qsStringifyOptions: { options: { encode: false } },
+      qs: query,
+      body: requestBody
+    });
     return response;
   }
 
@@ -49,8 +54,10 @@ function InsertCustomer(ncUtil, channelProfile, flowContext, payload, callback) 
     stub.out.response.endpointStatusMessage = response.message;
     stub.out.ncStatusCode = 201;
     stub.out.payload.customerRemoteID = response.body.profile_id;
-    stub.out.payload.customerBusinessReference =
-      nc.extractBusinessReferences(stub.channelProfile.customerBusinessReferences, response.body);
+    stub.out.payload.customerBusinessReference = nc.extractBusinessReferences(
+      stub.channelProfile.customerBusinessReferences,
+      response.body
+    );
   }
 
   async function handleError(error) {

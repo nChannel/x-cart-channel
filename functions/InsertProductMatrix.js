@@ -76,7 +76,9 @@ let InsertProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
 
   async function insertProduct() {
     let variants = payload.doc.variants;
+    let attributeValues = payload.doc.attributeValues;
     delete payload.doc.variants;
+    delete payload.doc.attributeValues;
 
     let response = await request
       .post({
@@ -96,7 +98,8 @@ let InsertProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
     payload.doc.product_id = response.body.product_id;
 
     await Promise.all(variants.map(insertProductVariant))
-      .then(() => createAttributeValues(variants))
+      .then(() => createAttributeVariantValues(variants))
+      .then(() => createAttributeValues(attributeValues))
       .catch(err => {
         throw err;
       });
@@ -132,7 +135,57 @@ let InsertProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
     variant.options = options;
   }
 
-  async function createAttributeValues(variants) {
+  async function createAttributeValues(attributeValues) {
+    for (let i = 0; i < attributeValues.length; i++) {
+      let attributeValue = {
+        product: {
+          product_id: payload.doc.product_id
+        },
+        attribute: {
+          id: attributeValues[i].attribute_id
+        }
+      };
+
+      let attributeUrl = `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${
+        channelProfile.channelAuthValues.apiKey
+      }&_schema=default&_path=`;
+
+      switch (attributeValues[i].type) {
+        case "S":
+          attributeUrl = `${attributeUrl}attributevalue-attributevalueselect/0`;
+          attributeValue.attribute_option_id = attributeValues[i].attribute_option_id;
+          break;
+
+        case "C":
+          attributeUrl = `${attributeUrl}attributevalue-attributevaluecheckbox/0`;
+          attributeValue.value = attributeValues[i].value;
+          break;
+
+        case "T":
+          attributeUrl = `${attributeUrl}attributevalue-attributevaluetext/0`;
+          attributeValue.translations = attributeValues[i].translations;
+          break;
+
+        default:
+          throw new Error(`An Attribute Value under the Product does not have a 'type' field.`);
+      }
+
+      let response = await request
+        .post({
+          url: attributeUrl,
+          body: attributeValue,
+          json: true,
+          resolveWithFullResponse: true
+        })
+        .catch(err => {
+          throw err;
+        });
+
+      logInfo(`Attribute of type '${attributeValues[i].type}' Value Inserted with ID: ${response.body.id}`);
+    }
+  }
+
+  async function createAttributeVariantValues(variants) {
     logInfo(`Processing Attribute Values`);
     let attributes = [];
 
@@ -186,34 +239,6 @@ let InsertProductMatrix = function(ncUtil, channelProfile, flowContext, payload,
       logInfo(`Attribute Value Inserted with ID: ${response.body.id}`);
     }
   }
-
-  // async function createAttributeValue(variant, options) {
-  //   logInfo(`Processing Attribute Value`);
-  //   for (let i = 0; i < options.length; i++) {
-  //     let attributeValue = {
-  //         "variants": [
-  //             {
-  //                 "id": variant.id
-  //             }
-  //         ],
-  //         "attribute_option": {
-  //             "id": options[i].attribute_option_id
-  //         },
-  //         "product": {
-  //             "product_id": payload.doc.product_id
-  //         },
-  //         "attribute": {
-  //             "id": options[i].attribute_id
-  //         }
-  //     }
-  //
-  //     let response = await request.post({ url: `${channelProfile.channelSettingsValues.adminUrl}?target=RESTAPI&_key=${channelProfile.channelAuthValues.apiKey}&_schema=default&_path=attributevalue-attributevalueselect/0`,
-  //        body: attributeValue, json: true, resolveWithFullResponse: true })
-  //        .catch((err) => { throw err; });
-  //
-  //     logInfo(`Attribute Value Inserted with ID: ${response.body.id}`);
-  //   }
-  // }
 
   async function buildResponse(response) {
     out.response.endpointStatusCode = response.statusCode;
