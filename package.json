@@ -2,7 +2,9 @@
   "name": "@nchannel/x-cart-channel",
   "author": "nChannel Developers <developers@nchannel.com>",
   "description": "X-Cart channel for the nChannel platform.",
+  "main": "x_cart_channel.js",
   "dependencies": {
+    "@nchannel/endpoint-sdk": "1.0.10",
     "jsonata": "^1.5.4",
     "moment": "^2.22.2",
     "qs": "^6.5.2",
@@ -29,7 +31,7 @@
     "soap": "0.23.0"
   },
   "scripts": {
-    "test": "mocha --timeout 10000 validation/*.spec.js",
+    "test": "npx nchannel-sdk test",
     "coverage": "nyc --reporter=text --reporter=html npm test",
     "precommit": "pretty-quick --staged"
   },

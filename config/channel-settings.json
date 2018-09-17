@@ -431,13 +431,9 @@
           "adminUrl": {
             "title": "Admin Url",
             "type": "string"
-          },
-          "implFolderName": {
-            "title": "Implementation Folder Name",
-            "type": "string"
           }
         },
-        "required": ["protocol", "adminUrl", "implFolderName"]
+        "required": ["protocol", "adminUrl"]
       },
       "configView": [
         {
