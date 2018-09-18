@@ -39,55 +39,63 @@
       },
       "configDef": {
         "configValues": {
-          "doPutProductPricingFlag": false,
-          "doPutProductQuantityFlag": false,
-          "doUpdateProduct": true,
-          "canUpdateProductPricingFlag": false,
-          "canUpdateProductQuantityFlag": false,
-          "canUpdateProduct": true,
+          "canInsertSimpleProduct": true,
+          "canInsertMatrixProduct": true,
+          "canInsertProductPricingFlag": false,
+          "canInsertProductQuantityFlag": false,
           "canUpdateSimpleProduct": true,
           "canUpdateMatrixProduct": true,
-          "canInsertSimpleProduct": true,
-          "canInsertMatrixProduct": true
+          "canUpdateProductPricingFlag": true,
+          "canUpdateProductQuantityFlag": true,
+          "doInsertSimpleProduct": false,
+          "doInsertMatrixProduct": true,
+          "doInsertProductPricingFlag": false,
+          "doInsertProductQuantityFlag": false,
+          "doUpdateSimpleProduct": false,
+          "doUpdateMatrixProduct": true,
+          "doUpdateProductPricingFlag": true,
+          "doUpdateProductQuantityFlag": true,
+          "doPutProductPricingFlag": true,
+          "doPutProductQuantityFlag": true
         },
-        "configView": ["doUpdateProduct"],
+        "configView": ["doUpdateSimpleProduct", "doUpdateMatrixProduct"],
         "configModel": {
           "required": [
-            "doPutProductPricingFlag",
-            "doPutProductQuantityFlag",
-            "doUpdateProduct",
-            "canUpdateProductPricingFlag",
-            "canUpdateProductQuantityFlag",
-            "canUpdateProduct",
+            "canInsertSimpleProduct",
+            "canInsertMatrixProduct",
+            "canInsertProductPricingFlag",
+            "canInsertProductQuantityFlag",
             "canUpdateSimpleProduct",
             "canUpdateMatrixProduct",
-            "canInsertSimpleProduct",
-            "canInsertMatrixProduct"
+            "canUpdateProductPricingFlag",
+            "canUpdateProductQuantityFlag",
+            "doInsertSimpleProduct",
+            "doInsertMatrixProduct",
+            "doInsertProductPricingFlag",
+            "doInsertProductQuantityFlag",
+            "doUpdateSimpleProduct",
+            "doUpdateMatrixProduct",
+            "doUpdateProductPricingFlag",
+            "doUpdateProductQuantityFlag",
+            "doPutProductPricingFlag",
+            "doPutProductQuantityFlag"
           ],
           "properties": {
-            "doPutProductPricingFlag": {
+            "canInsertSimpleProduct": {
               "type": "boolean",
-              "title": "PUT Product, doPutProductPricingFlag"
+              "title": "PUT Product, canInsertSimpleProduct"
             },
-            "doPutProductQuantityFlag": {
+            "canInsertMatrixProduct": {
               "type": "boolean",
-              "title": "PUT Product, doPutProductQuantityFlag"
+              "title": "PUT Product, canInsertMatrixProduct"
             },
-            "canUpdateProductPricingFlag": {
+            "canInsertProductPricingFlag": {
               "type": "boolean",
-              "title": "PUT Product, canUpdateProductPricingFlag"
+              "title": "PUT Product, canInsertProductPricingFlag"
             },
-            "canUpdateProductQuantityFlag": {
+            "canInsertProductQuantityFlag": {
               "type": "boolean",
-              "title": "PUT Product, canUpdateProductQuantityFlag"
-            },
-            "canUpdateProduct": {
-              "type": "boolean",
-              "title": "PUT Product, canUpdateProduct"
-            },
-            "doUpdateProduct": {
-              "type": "boolean",
-              "title": "PUT Product, doUpdateProduct"
+              "title": "PUT Product, canInsertProductQuantityFlag"
             },
             "canUpdateSimpleProduct": {
               "type": "boolean",
@@ -97,13 +105,53 @@
               "type": "boolean",
               "title": "PUT Product, canUpdateMatrixProduct"
             },
-            "canInsertSimpleProduct": {
+            "canUpdateProductPricingFlag": {
               "type": "boolean",
-              "title": "PUT Product, canInsertSimpleProduct"
+              "title": "PUT Product, canUpdateProductPricingFlag"
             },
-            "canInsertMatrixProduct": {
+            "canUpdateProductQuantityFlag": {
               "type": "boolean",
-              "title": "PUT Product, canInsertMatrixProduct"
+              "title": "PUT Product, canUpdateProductQuantityFlag"
+            },
+            "doInsertSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertSimpleProduct"
+            },
+            "doInsertMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertMatrixProduct"
+            },
+            "doInsertProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertProductPricingFlag"
+            },
+            "doInsertProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertProductQuantityFlag"
+            },
+            "doUpdateSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateSimpleProduct"
+            },
+            "doUpdateMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateMatrixProduct"
+            },
+            "doUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductPricingFlag"
+            },
+            "doUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductQuantityFlag"
+            },
+            "doPutProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductPricingFlag"
+            },
+            "doPutProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductQuantityFlag"
             }
           },
           "type": "object"
@@ -147,15 +195,20 @@
       },
       "configDef": {
         "configValues": {
-          "canUpdateProductPricingFlag": true
+          "canUpdateProductPricingFlag": true,
+          "doUpdateProductPricingFlag": true
         },
-        "configView": [],
+        "configView": ["doUpdateProductPricingFlag"],
         "configModel": {
-          "required": ["canUpdateProductPricingFlag"],
+          "required": ["canUpdateProductPricingFlag", "doUpdateProductPricingFlag"],
           "properties": {
             "canUpdateProductPricingFlag": {
               "type": "boolean",
               "title": "PUT ProductPricing, canUpdateProductPricingFlag"
+            },
+            "doUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductPricingFlag"
             }
           },
           "type": "object"
@@ -179,15 +232,20 @@
       },
       "configDef": {
         "configValues": {
-          "canUpdateProductQuantityFlag": true
+          "canUpdateProductQuantityFlag": true,
+          "doUpdateProductQuantityFlag": true
         },
-        "configView": [],
+        "configView": ["doUpdateProductQuantityFlag"],
         "configModel": {
-          "required": ["canUpdateProductQuantityFlag"],
+          "required": ["canUpdateProductQuantityFlag", "doUpdateProductQuantityFlag"],
           "properties": {
             "canUpdateProductQuantityFlag": {
               "type": "boolean",
               "title": "PUT ProductQuantity, canUpdateProductQuantityFlag"
+            },
+            "doUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductQuantityFlag"
             }
           },
           "type": "object"
