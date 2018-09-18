@@ -1,5 +1,7 @@
 "use strict";
 
+const moment = require("moment");
+
 module.exports = async function(flowContext, payload) {
   let orders = [];
   let hasMore = false;
@@ -9,11 +11,10 @@ module.exports = async function(flowContext, payload) {
 
   let uri = `${this.baseUri}?target=RESTAPI&_key=${
     this.channelProfile.channelAuthValues.apiKey
-  }&_schema=complex&_path=order&_cnd[date][0]=${this.nc
-    .moment(payload.createdDateRange.startDateGMT)
-    .unix()}&_cnd[date][1]=${this.nc
-    .moment(payload.createdDateRange.endDateGMT)
-    .unix()}&_cnd[limit][0]=${payload.pageSize * (payload.page - 1)}&_cnd[limit][1]=${payload.pageSize}`;
+  }&_schema=complex&_path=order&_cnd[date][0]=${moment(
+    payload.createdDateRange.startDateGMT
+  ).unix()}&_cnd[date][1]=${moment(payload.createdDateRange.endDateGMT).unix()}&_cnd[limit][0]=${payload.pageSize *
+    (payload.page - 1)}&_cnd[limit][1]=${payload.pageSize}`;
 
   const response = await this.queryOrders(uri).bind(this);
 
