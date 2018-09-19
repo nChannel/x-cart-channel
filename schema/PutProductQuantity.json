@@ -7,26 +7,20 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
       "amount": {
-        "$id": "/properties/amount",
         "type": "number"
       },
       "variants": {
-        "$id": "/properties/variants",
         "type": "array",
         "items": {
-          "$id": "/properties/variants/items",
           "type": "object",
           "properties": {
             "id": {
-              "$id": "/properties/variants/items/properties/id",
               "type": "number"
             },
             "amount": {
-              "$id": "/properties/variants/items/properties/amount",
               "type": "number"
             },
             "defaultAmount": {
-              "$id": "/properties/variants/items/properties/defaultAmount",
               "type": "boolean"
             }
           }

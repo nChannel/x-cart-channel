@@ -1,273 +1,206 @@
 {
   "name": "X-Cart Put Product",
   "schemaDef": {
-    "$id": "http://example.com/example.json",
     "type": "object",
     "definitions": {},
     "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
       "ogMeta": {
-        "$id": "/properties/ogMeta",
         "type": "string"
       },
       "useCustomOG": {
-        "$id": "/properties/useCustomOG",
         "type": "boolean"
       },
       "marketPrice": {
-        "$id": "/properties/marketPrice",
         "type": "number"
       },
       "pinCodesEnabled": {
-        "$id": "/properties/pinCodesEnabled",
         "type": "boolean"
       },
       "autoPinCodes": {
-        "$id": "/properties/autoPinCodes",
         "type": "boolean"
       },
       "participateSale": {
-        "$id": "/properties/participateSale",
         "type": "boolean"
       },
       "discountType": {
-        "$id": "/properties/discountType",
         "type": "string"
       },
       "salePriceValue": {
-        "$id": "/properties/salePriceValue",
         "type": "number"
       },
       "xcPendingBulkEdit": {
-        "$id": "/properties/xcPendingBulkEdit",
         "type": "boolean"
       },
       "isCustomerAttachmentsAvailable": {
-        "$id": "/properties/isCustomerAttachmentsAvailable",
         "type": "boolean"
       },
       "isCustomerAttachmentsRequired": {
-        "$id": "/properties/isCustomerAttachmentsRequired",
         "type": "boolean"
       },
       "freeShip": {
-        "$id": "/properties/freeShip",
         "type": "boolean"
       },
       "shipForFree": {
-        "$id": "/properties/shipForFree",
         "type": "boolean"
       },
       "freightFixedFee": {
-        "$id": "/properties/freightFixedFee",
         "type": "number"
       },
       "useAsSegmentCondition": {
-        "$id": "/properties/useAsSegmentCondition",
         "type": "boolean"
       },
       "demo": {
-        "$id": "/properties/demo",
         "type": "boolean"
       },
       "product_id": {
-        "$id": "/properties/product_id",
         "type": "number"
       },
       "price": {
-        "$id": "/properties/price",
         "type": "number"
       },
       "sku": {
-        "$id": "/properties/sku",
         "type": "string"
       },
       "enabled": {
-        "$id": "/properties/enabled",
         "type": "boolean"
       },
       "weight": {
-        "$id": "/properties/weight",
         "type": "number"
       },
       "useSeparateBox": {
-        "$id": "/properties/useSeparateBox",
         "type": "boolean"
       },
       "boxWidth": {
-        "$id": "/properties/boxWidth",
         "type": "number"
       },
       "boxLength": {
-        "$id": "/properties/boxLength",
         "type": "number"
       },
       "boxHeight": {
-        "$id": "/properties/boxHeight",
         "type": "number"
       },
       "itemsPerBox": {
-        "$id": "/properties/itemsPerBox",
         "type": "number"
       },
       "free_shipping": {
-        "$id": "/properties/free_shipping",
         "type": "boolean"
       },
       "taxable": {
-        "$id": "/properties/taxable",
         "type": "boolean"
       },
       "javascript": {
-        "$id": "/properties/javascript",
         "type": "string"
       },
       "arrivalDate": {
-        "$id": "/properties/arrivalDate",
         "type": "number"
       },
       "date": {
-        "$id": "/properties/date",
         "type": "number"
       },
       "updateDate": {
-        "$id": "/properties/updateDate",
         "type": "number"
       },
       "needProcess": {
-        "$id": "/properties/needProcess",
         "type": "boolean"
       },
       "inventoryEnabled": {
-        "$id": "/properties/inventoryEnabled",
         "type": "boolean"
       },
       "amount": {
-        "$id": "/properties/amount",
         "type": "number"
       },
       "lowLimitEnabledCustomer": {
-        "$id": "/properties/lowLimitEnabledCustomer",
         "type": "boolean"
       },
       "lowLimitEnabled": {
-        "$id": "/properties/lowLimitEnabled",
         "type": "boolean"
       },
       "lowLimitAmount": {
-        "$id": "/properties/lowLimitAmount",
         "type": "number"
       },
       "attrSepTab": {
-        "$id": "/properties/attrSepTab",
         "type": "boolean"
       },
       "metaDescType": {
-        "$id": "/properties/metaDescType",
         "type": "string"
       },
       "sales": {
-        "$id": "/properties/sales",
         "type": "number"
       },
       "xcPendingExport": {
-        "$id": "/properties/xcPendingExport",
         "type": "boolean"
       },
       "entityVersion": {
-        "$id": "/properties/entityVersion",
         "type": "string"
       },
       "featuredProducts": {
-        "$id": "/properties/featuredProducts",
         "type": "array"
       },
       "attachments": {
-        "$id": "/properties/attachments",
         "type": "array"
       },
       "pinCodes": {
-        "$id": "/properties/pinCodes",
         "type": "array"
       },
       "views_stats": {
-        "$id": "/properties/views_stats",
         "type": "array"
       },
       "purchase_stats": {
-        "$id": "/properties/purchase_stats",
         "type": "array"
       },
       "tabs": {
-        "$id": "/properties/tabs",
         "type": "array"
       },
       "tags": {
-        "$id": "/properties/tags",
         "type": "array"
       },
       "variants": {
-        "$id": "/properties/variants",
         "type": "array",
         "items": {
-          "$id": "/properties/variants/items",
           "type": "object",
           "required": ["options"],
           "properties": {
             "id": {
-              "$id": "/properties/variants/items/properties/id",
               "type": "number"
             },
             "price": {
-              "$id": "/properties/variants/items/properties/price",
               "type": "number"
             },
             "defaultPrice": {
-              "$id": "/properties/variants/items/properties/defaultPrice",
               "type": "boolean"
             },
             "amount": {
-              "$id": "/properties/variants/items/properties/amount",
               "type": "number"
             },
             "defaultAmount": {
-              "$id": "/properties/variants/items/properties/defaultAmount",
               "type": "boolean"
             },
             "weight": {
-              "$id": "/properties/variants/items/properties/weight",
               "type": "number"
             },
             "defaultWeight": {
-              "$id": "/properties/variants/items/properties/defaultWeight",
               "type": "boolean"
             },
             "sku": {
-              "$id": "/properties/variants/items/properties/sku",
               "type": "string"
             },
             "variant_id": {
-              "$id": "/properties/variants/items/properties/variant_id",
               "type": "string"
             },
             "defaultValue": {
-              "$id": "/properties/variants/items/properties/defaultValue",
               "type": "boolean"
             },
             "options": {
-              "$id": "/properties/variants/items/properties/options",
               "type": "array",
               "items": {
-                "$id": "/properties/variants/items/properties/options/items",
                 "type": "object",
                 "required": ["attribute_option_id", "attribute_id"],
                 "properties": {
                   "attribute_id": {
-                    "$id": "/properties/variants/items/properties/options/items/properties/attribute_id",
                     "type": "number"
                   },
                   "attribute_option_id": {
-                    "$id": "/properties/variants/items/properties/options/items/properties/attribute_option_id",
                     "type": "number"
                   }
                 }
@@ -277,118 +210,91 @@
         }
       },
       "variantsAttributes": {
-        "$id": "/properties/variantsAttributes",
         "type": "array",
         "items": {
-          "$id": "/properties/variantsAttributes/items",
           "type": "object",
           "properties": {
             "visible": {
-              "$id": "/properties/variantsAttributes/items/properties/visible",
               "type": "boolean"
             },
             "id": {
-              "$id": "/properties/variantsAttributes/items/properties/id",
               "type": "number"
             },
             "addToNew": {
-              "$id": "/properties/variantsAttributes/items/properties/addToNew",
               "type": "string"
             }
           }
         }
       },
       "categoryProducts": {
-        "$id": "/properties/categoryProducts",
         "type": "array",
         "items": {
-          "$id": "/properties/categoryProducts/items",
           "type": "object",
           "properties": {
             "id": {
-              "$id": "/properties/categoryProducts/items/properties/id",
               "type": "number"
             },
             "orderby": {
-              "$id": "/properties/categoryProducts/items/properties/orderby",
               "type": "number"
             },
             "orderbyInProduct": {
-              "$id": "/properties/categoryProducts/items/properties/orderbyInProduct",
               "type": "number"
             }
           }
         }
       },
       "images": {
-        "$id": "/properties/images",
         "type": "array"
       },
       "productClass": {
-        "$id": "/properties/productClass",
         "type": "object",
         "properties": {
           "id": {
-            "$id": "/properties/productClass/properties/id",
             "type": "number"
           },
           "position": {
-            "$id": "/properties/productClass/properties/position",
             "type": "number"
           }
         }
       },
       "taxClass": {
-        "$id": "/properties/taxClass",
         "type": "null"
       },
       "attributes": {
-        "$id": "/properties/attributes",
         "type": "array"
       },
       "attributeValues": {
-        "$id": "/properties/attributeValues",
         "type": "array",
         "items": {
-          "$id": "/properties/attributeValues/items",
           "type": "object",
           "properties": {
             "attribute_id": {
-              "$id": "/properties/attributeValues/items/properties/attribute_id",
               "type": "number"
             },
             "attribute_option_id": {
-              "$id": "/properties/attributeValues/items/properties/attribute_option_id",
               "type": "number"
             },
             "translations": {
-              "$id": "/properties/attributeValues/items/properties/translations",
               "type": "array",
               "items": {
-                "$id": "/properties/attributeValues/items/properties/translations/items",
                 "type": "object",
                 "properties": {
                   "value": {
-                    "$id": "/properties/attributeValues/items/properties/translations/items/properties/value",
                     "type": "string"
                   },
                   "label_id": {
-                    "$id": "/properties/attributeValues/items/properties/translations/items/properties/label_id",
                     "type": "number"
                   },
                   "code": {
-                    "$id": "/properties/attributeValues/items/properties/translations/items/properties/code",
                     "type": "string"
                   }
                 }
               }
             },
             "value": {
-              "$id": "/properties/attributeValues/items/properties/value",
               "type": "boolean"
             },
             "type": {
-              "$id": "/properties/attributeValues/items/properties/attribute_id",
               "type": "string",
               "enum": ["S", "C", "T"]
             }
@@ -396,42 +302,32 @@
         }
       },
       "translations": {
-        "$id": "/properties/translations",
         "type": "array",
         "items": {
-          "$id": "/properties/translations/items",
           "type": "object",
           "properties": {
             "name": {
-              "$id": "/properties/translations/items/properties/name",
               "type": "string"
             },
             "description": {
-              "$id": "/properties/translations/items/properties/description",
               "type": "string"
             },
             "briefDescription": {
-              "$id": "/properties/translations/items/properties/briefDescription",
               "type": "string"
             },
             "metaTags": {
-              "$id": "/properties/translations/items/properties/metaTags",
               "type": "string"
             },
             "metaDesc": {
-              "$id": "/properties/translations/items/properties/metaDesc",
               "type": "string"
             },
             "metaTitle": {
-              "$id": "/properties/translations/items/properties/metaTitle",
               "type": "string"
             },
             "label_id": {
-              "$id": "/properties/translations/items/properties/label_id",
               "type": "number"
             },
             "code": {
-              "$id": "/properties/translations/items/properties/code",
               "type": "string"
             }
           }
