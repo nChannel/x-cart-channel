@@ -23,9 +23,9 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {
-          "salesOrderBusinessReferences": ["orderNumber"]
-        }
+        "referenceLocation": {},
+        "remoteID": "order_id",
+        "businessReferences": ["orderNumber"]
       }
     },
     {
@@ -159,7 +159,7 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": { "productBusinessReferences": ["sku"] },
+        "referenceLocation": {},
         "remoteID": "product_id",
         "businessReferences": ["sku"],
         "children": [
@@ -216,7 +216,7 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": { "productPricingBusinessReferences": ["sku"] },
+        "referenceLocation": {},
         "remoteID": "id",
         "businessReferences": ["sku"]
       }
@@ -253,7 +253,7 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": { "productQuantityBusinessReferences": ["sku"] },
+        "referenceLocation": {},
         "remoteID": "id",
         "businessReferences": ["sku"]
       }
@@ -306,9 +306,13 @@
       "documentDef": {
         "schema": {},
         "referenceLocation": {
-          "fulfillmentBusinessReferences": ["value"],
           "salesOrderBusinessReferences": ["order.orderNumber"]
-        }
+        },
+        "secondaryReferences": {
+          "salesOrderBusinessReferences": ["order.orderNumber"]
+        },
+        "remoteID": "tracking_id",
+        "businessReferences": ["value"]
       }
     },
     {
@@ -418,9 +422,9 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {
-          "customerBusinessReferences": ["login"]
-        }
+        "referenceLocation": {},
+        "remoteID": "profile_id",
+        "businessReferences": ["login"]
       }
     },
     {
@@ -470,9 +474,9 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {
-          "customerAddressBusinessReferences": ["$join(addressFields.value)"]
-        }
+        "referenceLocation": {},
+        "remoteID": "address_id",
+        "businessReferences": ["$join(addressFields.value)"]
       }
     }
   ],
