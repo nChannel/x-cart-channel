@@ -27,14 +27,13 @@ async function updateProductVariant(variant, updatedProduct) {
       reqs.body = variant;
 
       this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
-
       return this.request(reqs)
         .then(response => {
           this.info(`Variant Updated with ID: ${updatedProduct.variants[i].id}`);
           variant.id = updatedProduct.variants[i].id;
           variant.options = options;
 
-          updateAttributeVariantValues.bind(this)(variant, response.body);
+          return updateAttributeVariantValues.bind(this)(variant, response.body);
         })
         .catch(this.handleRejection.bind(this));
     }
@@ -50,13 +49,14 @@ async function updateProductVariant(variant, updatedProduct) {
     }&_schema=default&_path=xc-productvariants-productvariant/0`;
     reqs.body = variant;
 
+    this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
     return this.request(reqs)
       .then(response => {
         logInfo(`Variant Inserted with ID: ${response.body.id}`);
         variant.id = response.body.id;
         variant.options = options;
 
-        createAttributeVariantValues.bind(this)(variant);
+        return createAttributeVariantValues.bind(this)(variant);
       })
       .catch(this.handleRejection.bind(this));
   }
@@ -74,6 +74,7 @@ function updateAttributeVariantValues(variant, updatedVariant) {
       resolveWithFullResponse: true
     };
 
+    this.info(`Requesting [${attributeReqs.method} ${attributeReqs.uri}]`);
     return this.request(attributeReqs)
       .then(response => {
         let attributeValue = {
@@ -96,6 +97,7 @@ function updateAttributeVariantValues(variant, updatedVariant) {
 
         reqs.body = attributeValue;
 
+        this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
         return this.request(reqs)
           .then(response => {
             this.info(`Attribute Value Updated with ID: ${response.body.id}`);
@@ -112,6 +114,7 @@ function createAttributeVariantValues(variant) {
   }&_schema=default&_path=attributevalue-attributevalueselect/0`;
 
   let attributeReqs = {
+    uri: url,
     method: "POST",
     resolveWithFullResponse: true
   };
@@ -126,8 +129,9 @@ function createAttributeVariantValues(variant) {
       attribute: { id: option.attribute_id }
     };
 
-    reqs.body = attributeValue;
+    attributeReqs.body = attributeValue;
 
+    this.info(`Requesting [${attributeReqs.method} ${attributeReqs.uri}]`);
     await this.request(attributeReqs)
       .then(response => {
         this.info(`Attribute Value Updated with ID: ${response.body.id}`);
@@ -143,9 +147,10 @@ async function removeAttributeValues(aT, aC) {
     resolveWithFullResponse: true
   };
   for (let i = 0; i < aT.length; i++) {
-    attributeReqs.url = `${this.baseUri}?target=RESTAPI&_key=${
+    attributeReqs.uri = `${this.baseUri}?target=RESTAPI&_key=${
       this.channelProfile.channelAuthValues.apiKey
     }&_schema=default&_path=attributevalue-attributevaluetext/${aT[i].id}`;
+    this.info(`Requesting [${attributeReqs.method} ${attributeReqs.uri}]`);
     await this.request(attributeReqs)
       .then(response => {
         this.info(`Attribute with ID ${aT[i].id} removed`);
@@ -154,9 +159,10 @@ async function removeAttributeValues(aT, aC) {
   }
 
   for (let i = 0; i < aC.length; i++) {
-    attributeReqs.url = `${this.baseUri}?target=RESTAPI&_key=${
+    attributeReqs.uri = `${this.baseUri}?target=RESTAPI&_key=${
       this.channelProfile.channelAuthValues.apiKey
     }&_schema=default&_path=attributevalue-attributevaluecheckbox/${aC[i].id}`;
+    this.info(`Requesting [${attributeReqs.method} ${attributeReqs.uri}]`);
     await this.request(attributeReqs)
       .then(response => {
         this.info(`Attribute with ID ${aC[i].id} removed`);
@@ -199,8 +205,9 @@ async function createAttributeValues(attributeValues) {
         throw new Error(`An Attribute Value under the Product does not have a 'type' field.`);
     }
 
-    attributeReqs.url = attributeUrl;
+    attributeReqs.uri = attributeUrl;
 
+    this.info(`Requesting [${attributeReqs.method} ${attributeReqs.uri}]`);
     await this.request(attributeReqs)
       .then(response => {
         this.info(`Attribute of type '${attributeValues[i].type}' Value Inserted with ID: ${response.body.id}`);

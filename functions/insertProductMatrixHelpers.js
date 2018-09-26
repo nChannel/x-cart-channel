@@ -76,6 +76,7 @@ async function createAttributeVariantValues(variants, payload) {
 
     reqs.body = attributeValue;
 
+    this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
     let response = await this.request(reqs).catch(this.handleRejection.bind(this));
 
     this.info(`Attribute Value Inserted with ID: ${response.body.id}`);
@@ -117,9 +118,10 @@ async function createAttributeValues(attributeValues, payload) {
         throw new Error(`An Attribute Value under the Product does not have a 'type' field.`);
     }
 
+    reqs.uri = attributeUrl;
     reqs.body = attributeValue;
 
-    this.info(`Requesting [${reqs.method} ${attributeUrl}]`);
+    this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
 
     let response = await this.request(reqs).catch(this.handleRejection.bind(this));
 
