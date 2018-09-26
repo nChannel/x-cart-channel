@@ -174,6 +174,10 @@ class x_cart_channel extends Channel {
     return require("./functions/getSalesOrderHelpers").queryOrders.bind(this)(...args);
   }
 
+  queryProducts(...args) {
+    return require("./functions/getProductMatrixHelpers").queryProducts.bind(this)(...args);
+  }
+
   insertProductVariant(...args) {
     return require("./functions/insertProductMatrixHelpers").insertProductVariant.bind(this)(...args);
   }

@@ -19,7 +19,7 @@ module.exports = async function(flowContext, payload) {
 
   const queries = calls.slice(currentPageIndex * pageSize, currentPage * pageSize);
 
-  const responses = await Promise.all(queries.map(this.queryOrders.bind(this)));
+  const responses = await Promise.all(queries.map(this.queryProducts.bind(this)));
 
   products = responses.reduce((result, res) => {
     if (typeof res.body !== "undefined" && res.body != null) {
