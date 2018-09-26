@@ -10,6 +10,189 @@
   },
   "docs": [
     {
+      "functionName": "getProductMatrixByCreatedTimeRange"
+    },
+    {
+      "functionName": "getProductMatrixById",
+      "tests": [
+        {
+          "statusCode": 200,
+          "payload": {
+            "remoteIDs": ["4"],
+            "page": 1,
+            "pageSize": 10
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/4",
+              "method": "GET",
+              "replyHeaders": {
+                "X-Result-Count": "2"
+              },
+              "statusCode": 200,
+              "responsePayload": [
+                {
+                  "sku": "TEST-SKU",
+                  "product_id": 4,
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "shortDescription": "<p>Short description</p>",
+                  "price": 37.99,
+                  "weight": 2.5,
+                  "quantity": 1000,
+                  "releaseDate": "2018-09-25T00:00:00-04:00",
+                  "image": [],
+                  "enabled": false,
+                  "freeShipping": false,
+                  "categories": [],
+                  "memberships": []
+                }
+              ]
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        },
+        {
+          "statusCode": 204,
+          "payload": {
+            "remoteIDs": ["4"],
+            "page": 1,
+            "pageSize": 2
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/4",
+              "method": "GET",
+              "replyHeaders": {
+                "X-Result-Count": "0"
+              },
+              "statusCode": 200,
+              "responsePayload": "null"
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        },
+        {
+          "statusCode": 206,
+          "payload": {
+            "remoteIDs": ["4", "5"],
+            "page": 1,
+            "pageSize": 1
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/4",
+              "method": "GET",
+              "replyHeaders": {
+                "X-Result-Count": "2"
+              },
+              "statusCode": 200,
+              "responsePayload": [
+                {
+                  "sku": "TEST-SKU",
+                  "product_id": 4,
+                  "name": "Testing item",
+                  "description": "<p>Description</p>",
+                  "shortDescription": "<p>Short description</p>",
+                  "price": 37.99,
+                  "weight": 2.5,
+                  "quantity": 1000,
+                  "releaseDate": "2018-09-25T00:00:00-04:00",
+                  "image": [],
+                  "enabled": false,
+                  "freeShipping": false,
+                  "categories": [],
+                  "memberships": []
+                }
+              ]
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        },
+        {
+          "statusCode": 400,
+          "payload": {
+            "remoteIDs": ["1"],
+            "page": 1,
+            "pageSize": 2
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/1",
+              "method": "GET",
+              "replyHeaders": {},
+              "statusCode": 403,
+              "responsePayload": ""
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        },
+        {
+          "statusCode": 429,
+          "payload": {
+            "remoteIDs": ["1"],
+            "page": 1,
+            "pageSize": 2
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/1",
+              "method": "GET",
+              "replyHeaders": {},
+              "statusCode": 429,
+              "responsePayload": ""
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        },
+        {
+          "statusCode": 500,
+          "payload": {
+            "remoteIDs": ["1"],
+            "page": 1,
+            "pageSize": 2
+          },
+          "baseUri": "https://localhost/admin.php",
+          "defaultHeaders": {},
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/1",
+              "method": "GET",
+              "replyHeaders": {},
+              "statusCode": 500,
+              "responsePayload": ""
+            }
+          ],
+          "channelProfile": {
+            "productBusinessReferences": ["product_id"]
+          }
+        }
+      ]
+    },
+    {
+      "functionName": "getProductMatrixByModifiedTimeRange"
+    },
+    {
       "functionName": "getSalesOrderByCreatedTimeRange",
       "tests": [
         {

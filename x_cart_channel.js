@@ -20,6 +20,18 @@ class x_cart_channel extends Channel {
     return require("./functions/extractCustomerAddressesFromCustomer").bind(this)(...args);
   }
 
+  async getProductMatrixById(...args) {
+    return require("./functions/getProductMatrixById").bind(this)(...args);
+  }
+
+  async getProductMatrixByCreatedTimeRange(...args) {
+    return require("./functions/getProductMatrixByCreatedTimeRange").bind(this)(...args);
+  }
+
+  async getProductMatrixByModifiedTimeRange(...args) {
+    return require("./functions/getProductMatrixByModifiedTimeRange").bind(this)(...args);
+  }
+
   async getSalesOrderById(...args) {
     return require("./functions/getSalesOrderById").bind(this)(...args);
   }
