@@ -47,11 +47,21 @@ module.exports = function(flowContext, payload) {
       return Promise.all(variants.map(this.insertProductVariant.bind(this)))
         .then(() => this.createAttributeVariantValues(variants, payload))
         .then(() => this.createAttributeValues(attributeValues, payload))
-        .then(() => {
+        .then(async () => {
+          // Get Updated Product
+          options.uri = `${this.baseUri}?target=RESTAPI&_key=${
+            this.channelProfile.channelAuthValues.apiKey
+          }&_schema=default&_path=product/${response.body.product_id}`;
+          options.method = "GET";
+
+          this.info(`Requesting [${options.method} ${options.uri}]`);
+
+          let product = await this.request(options).catch(this.handleRejection.bind(this));
+
           return {
             endpointStatusCode: response.statusCode,
             statusCode: 201,
-            payload: response.body
+            payload: product.body
           };
         });
     })

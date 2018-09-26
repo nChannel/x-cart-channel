@@ -34,7 +34,7 @@ async function updateProductVariant(variant, updatedProduct) {
           variant.id = updatedProduct.variants[i].id;
           variant.options = options;
 
-          updateAttributeVariantValues(variant, response.body);
+          updateAttributeVariantValues.bind(this)(variant, response.body);
         })
         .catch(this.handleRejection.bind(this));
     }
@@ -56,7 +56,7 @@ async function updateProductVariant(variant, updatedProduct) {
         variant.id = response.body.id;
         variant.options = options;
 
-        createAttributeVariantValues(variant);
+        createAttributeVariantValues.bind(this)(variant);
       })
       .catch(this.handleRejection.bind(this));
   }
@@ -69,6 +69,7 @@ function updateAttributeVariantValues(variant, updatedVariant) {
     }&_schema=default&_path=attributevalue-attributevalueselect/${updatedVariant.attributeValueS[i].id}`;
 
     let attributeReqs = {
+      uri: url,
       method: "GET",
       resolveWithFullResponse: true
     };

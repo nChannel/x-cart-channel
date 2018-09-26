@@ -305,9 +305,7 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {
-          "salesOrderBusinessReferences": ["order.orderNumber"]
-        },
+        "referenceLocation": {},
         "secondaryReferences": {
           "salesOrderBusinessReferences": ["order.orderNumber"]
         },
@@ -504,8 +502,7 @@
         }
       ],
       "configValues": {
-        "protocol": "http",
-        "implFolderName": "x-cart-channel"
+        "protocol": "http"
       }
     }
   },
@@ -526,7 +523,8 @@
       "configView": [
         {
           "key": "apiKey",
-          "title": "API Key"
+          "title": "API Key",
+          "type": "password"
         }
       ],
       "configValues": {}
