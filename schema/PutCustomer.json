@@ -1,0 +1,287 @@
+{
+  "name": "X-Cart Put Customer Schema",
+  "schemaDef": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1,
+    "properties": {
+      "profile_id": {
+        "type": "integer"
+      },
+      "login": {
+        "type": "string",
+        "format": "email"
+      },
+      "password": {
+        "type": "string"
+      },
+      "password_hint": {
+        "type": "string"
+      },
+      "password_hint_answer": {
+        "type": "string"
+      },
+      "passwordResetKey": {
+        "type": "string"
+      },
+      "passwordResetKeyDate": {
+        "description": "Unix Timestamp",
+        "type": "integer"
+      },
+      "access_level": {
+        "type": "integer"
+      },
+      "cms_profile_id": {
+        "type": "integer"
+      },
+      "cms_name": {
+        "type": "string"
+      },
+      "added": {
+        "description": "Unix Timestamp",
+        "type": "integer"
+      },
+      "first_login": {
+        "description": "Unix Timestamp",
+        "type": "integer"
+      },
+      "last_login": {
+        "description": "Unix Timestamp",
+        "type": "integer"
+      },
+      "status": {
+        "description": "Enabled/Disabled",
+        "type": "string",
+        "enum": ["E", "D"]
+      },
+      "statusComment": {
+        "type": "string"
+      },
+      "referer": {
+        "type": "string"
+      },
+      "language": {
+        "type": "string"
+      },
+      "last_shipping_id": {
+        "type": "integer"
+      },
+      "last_payment_id": {
+        "type": "integer"
+      },
+      "anonymous": {
+        "type": "boolean"
+      },
+      "forceChangePassword": {
+        "type": "boolean"
+      },
+      "dateOfLoginAttempt": {
+        "description": "Unix Timestamp",
+        "type": "integer"
+      },
+      "countOfLoginAttempts": {
+        "type": "integer"
+      },
+      "searchFakeField": {
+        "type": "string"
+      },
+      "xcPendingExport": {
+        "type": "boolean"
+      },
+      "lastCheckoutEmail": {
+        "type": "string"
+      },
+      "socialLoginProvider": {
+        "type": "string"
+      },
+      "socialLoginId": {
+        "type": "string"
+      },
+      "gaClientId": {
+        "type": "string"
+      },
+      "default_card_id": {
+        "type": "integer"
+      },
+      "pending_zero_auth": {
+        "type": "string"
+      },
+      "pending_zero_auth_txn_id": {
+        "type": "string"
+      },
+      "pending_zero_auth_status": {
+        "type": "string"
+      },
+      "pending_zero_auth_interface": {
+        "type": "string"
+      },
+      "braintree_customer_id": {
+        "type": "string"
+      },
+      "saveCardBoxChecked": {
+        "type": "boolean"
+      },
+      "conciergeUserId": {
+        "type": "string"
+      },
+      "mail_chimp_lists": {
+        "type": "array",
+        "uniqueItems": true
+      },
+      "mail_chimp_interests": {
+        "type": "array",
+        "uniqueItems": true
+      },
+      "mail_chimp_segments": {
+        "type": "array",
+        "uniqueItems": true
+      },
+      "conversations": {
+        "type": "array",
+        "uniqueItems": true
+      },
+      "event": {
+        "type": "array",
+        "uniqueItems": true
+      },
+      "membership": {
+        "type": "object",
+        "required": ["membership_id"],
+        "properties": {
+          "membership_id": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "title": "Membership"
+      },
+      "pending_membership": {
+        "type": "object",
+        "required": ["membership_id"],
+        "properties": {
+          "membership_id": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "title": "Pending Membership"
+      },
+      "addresses": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "address_id": {
+              "type": "integer"
+            },
+            "address_type": {
+              "description": "Residential/Commercial",
+              "type": "string",
+              "enum": ["R", "C"]
+            },
+            "is_billing": {
+              "type": "boolean"
+            },
+            "is_shipping": {
+              "type": "boolean"
+            },
+            "isWork": {
+              "type": "boolean"
+            },
+            "profile": {
+              "description": "Reference to the profile (customer) that this address belongs to",
+              "type": "object",
+              "required": ["profile_id"],
+              "properties": {
+                "profile_id": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "title": "Profile"
+            },
+            "addressFields": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["value", "addressField"],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "value": {
+                    "type": "string"
+                  },
+                  "addressField": {
+                    "description":
+                      "Reference to the address field being created/updated (ie. FirstName, LastName, Street, etc.)",
+                    "type": "object",
+                    "required": ["id"],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "title": "Address Field"
+                  }
+                },
+                "additionalProperties": false,
+                "title": "Address Field Value"
+              },
+              "uniqueItems": true,
+              "title": "Address Field Values"
+            },
+            "state": {
+              "type": "object",
+              "required": ["state_id"],
+              "properties": {
+                "state_id": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "title": "State"
+            },
+            "country": {
+              "type": "object",
+              "required": ["code"],
+              "properties": {
+                "code": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "title": "Country"
+            }
+          },
+          "additionalProperties": false,
+          "title": "Address"
+        },
+        "uniqueItems": true,
+        "title": "Addresses"
+      },
+      "roles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["id"],
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false,
+          "title": "Role"
+        },
+        "uniqueItems": true,
+        "title": "Roles"
+      }
+    },
+    "additionalProperties": false,
+    "title": "Profile"
+  },
+  "tags": ["X-Cart", "Put", "Customer"],
+  "audit": {}
+}

@@ -1,283 +1,13 @@
 {
-  "name": "Template Name",
-  "description": "Template Registry",
-  "channelIcon": "<base64 image>",
+  "sdkVersion": "1",
+  "name": "X-Cart",
+  "description": "X-Cart Channel Registry",
+  "channelIcon":
+    "data:image/jpeg;base64,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",
   "definitionFolderName": " ",
-  "retailClasses": [
-    "eCommerce"
-  ],
-  "orderProcessingRoles": [
-    "Sales","Fulfillment"
-  ],
+  "retailClasses": ["eCommerce"],
+  "orderProcessingRoles": ["Sales"],
   "channelActionRegistries": [
-    {
-      "name": "GET PRODUCTGROUP",
-      "description": "GET PRODUCTGROUP",
-      "channelVerb": "GET",
-      "channelNoun": "PRODUCTGROUP",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {},
-        "configView": [],
-        "configValues": {}
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productGroupBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "PUT PRODUCTGROUP",
-      "description": "PUT PRODUCTGROUP",
-      "channelVerb": "PUT",
-      "channelNoun": "PRODUCTGROUP",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues" : {
-          "doPutProductPricingFlag": false,
-          "doPutProductQuantityFlag": false,
-          "doPutProductFlag": false,
-          "canUpdateProductPricingFlag": false,
-          "canUpdateProductQuantityFlag": false,
-          "canUpdateProductFlag": false,
-          "canUpdateProductGroupFlag" : true
-        },
-        "configView" : [
-          "canUpdateProductGroupFlag"
-        ],
-        "configModel" : {
-          "required" : [
-            "doPutProductPricingFlag",
-            "doPutProductQuantityFlag",
-            "doPutProductFlag",
-            "canUpdateProductPricingFlag",
-            "canUpdateProductQuantityFlag",
-            "canUpdateProductFlag",
-            "canUpdateProductGroupFlag"
-          ],
-          "properties" : {
-            "doPutProductPricingFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, doPutProductPricingFlag"
-            },
-            "doPutProductQuantityFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, doPutProductQuantityFlag"
-            },
-            "doPutProductFlag" : {
-              "type" : "boolean",
-              "title" : "PUT ProductGroup, doPutProductFlag"
-            },
-            "canUpdateProductPricingFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, canUpdateProductPricingFlag"
-            },
-            "canUpdateProductQuantityFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, canUpdateProductQuantityFlag"
-            },
-            "canUpdateProductFlag" : {
-              "type" : "boolean",
-              "title" : "PUT ProductGroup, canUpdateProductFlag"
-            },
-            "canUpdateProductGroupFlag" : {
-              "type" : "boolean",
-              "title" : "PUT ProductGroup, canUpdateProductGroupFlag"
-            }
-          },
-          "type" : "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productGroupBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "GET PRODUCT",
-      "description": "GET PRODUCT",
-      "channelVerb": "GET",
-      "channelNoun": "PRODUCT",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {},
-        "configView": [],
-        "configValues": {}
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "PUT PRODUCT",
-      "description": "PUT PRODUCT",
-      "channelVerb": "PUT",
-      "channelNoun": "PRODUCT",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues" : {
-          "doPutProductPricingFlag": false,
-          "doPutProductQuantityFlag": false,
-          "canUpdateProductPricingFlag": false,
-          "canUpdateProductQuantityFlag": false,
-          "canUpdateProductFlag": true
-        },
-        "configView" : [
-          "canUpdateProductFlag"
-        ],
-        "configModel" : {
-          "required" : [
-            "doPutProductPricingFlag",
-            "doPutProductQuantityFlag",
-            "canUpdateProductPricingFlag",
-            "canUpdateProductQuantityFlag",
-            "canUpdateProductFlag"
-          ],
-          "properties" : {
-            "doPutProductPricingFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, doPutProductPricingFlag"
-            },
-            "doPutProductQuantityFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, doPutProductQuantityFlag"
-            },
-            "canUpdateProductPricingFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, canUpdateProductPricingFlag"
-            },
-            "canUpdateProductQuantityFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, canUpdateProductQuantityFlag"
-            },
-            "canUpdateProductFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Product, canUpdateProductFlag"
-            }
-          },
-          "type" : "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "GET PRODUCTPRICING",
-      "description": "GET PRODUCTPRICING",
-      "channelVerb": "GET",
-      "channelNoun": "PRODUCTPRICING",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {},
-        "configView": [],
-        "configValues": {}
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productPricingBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "PUT PRODUCTPRICING",
-      "description": "PUT PRODUCTPRICING",
-      "channelVerb": "PUT",
-      "channelNoun": "PRODUCTPRICING",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues" : {
-          "canUpdateProductPricingFlag": true
-        },
-        "configView" : [],
-        "configModel" : {
-          "required" : [
-            "canUpdateProductPricingFlag"
-          ],
-          "properties" : {
-            "canUpdateProductPricingFlag" : {
-              "type" : "boolean",
-              "title" : "PUT ProductPricing, canUpdateProductPricingFlag"
-            }
-          },
-          "type" : "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productPricingBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "GET PRODUCTQUANTITY",
-      "description": "GET PRODUCTQUANTITY",
-      "channelVerb": "GET",
-      "channelNoun": "PRODUCTQUANTITY",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {},
-        "configView": [],
-        "configValues": {}
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productQuantityBusinessReferences": [""]}
-      }
-    },
-    {
-      "name": "PUT PRODUCTQUANTITY",
-      "description": "PUT PRODUCTQUANTITY",
-      "channelVerb": "PUT",
-      "channelNoun": "PRODUCTQUANTITY",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues" : {
-          "canUpdateProductQuantityFlag": true
-        },
-        "configView" : [],
-        "configModel" : {
-          "required" : [
-            "canUpdateProductQuantityFlag"
-          ],
-          "properties" : {
-            "canUpdateProductQuantityFlag" : {
-              "type" : "boolean",
-              "title" : "PUT ProductQuantity, canUpdateProductQuantityFlag"
-            }
-          },
-          "type" : "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"productQuantityBusinessReferences": [""]}
-      }
-    },
     {
       "name": "GET SALESORDER",
       "description": "GET SALESORDER",
@@ -294,41 +24,239 @@
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {"salesOrderBusinessReferences": [""]}
+        "referenceLocation": {},
+        "remoteID": "order_id",
+        "businessReferences": ["orderNumber"]
       }
     },
     {
-      "channelNoun" : "SALESORDER",
-      "channelVerb" : "PUT",
-      "description" : "PUT SALESORDER",
-      "name" : "PUT SALESORDER",
-      "configDef" : {
-        "configValues" : {
-          "canUpdateOrderFlag" : false
+      "name": "PUT PRODUCT",
+      "description": "PUT PRODUCT",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCT",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "canInsertSimpleProduct": true,
+          "canInsertMatrixProduct": true,
+          "canInsertProductPricingFlag": false,
+          "canInsertProductQuantityFlag": false,
+          "canUpdateSimpleProduct": true,
+          "canUpdateMatrixProduct": true,
+          "canUpdateProductPricingFlag": false,
+          "canUpdateProductQuantityFlag": false,
+          "doInsertSimpleProduct": true,
+          "doInsertMatrixProduct": true,
+          "doInsertProductPricingFlag": false,
+          "doInsertProductQuantityFlag": false,
+          "doUpdateSimpleProduct": true,
+          "doUpdateMatrixProduct": true,
+          "doUpdateProductPricingFlag": false,
+          "doUpdateProductQuantityFlag": false,
+          "doPutProductPricingFlag": false,
+          "doPutProductQuantityFlag": false
         },
-        "configView" : [
-          "canUpdateOrderFlag"
-        ],
-        "configModel" : {
-          "required" : [
-            "canUpdateOrderFlag"
+        "configView": ["doUpdateSimpleProduct", "doUpdateMatrixProduct"],
+        "configModel": {
+          "required": [
+            "canInsertSimpleProduct",
+            "canInsertMatrixProduct",
+            "canInsertProductPricingFlag",
+            "canInsertProductQuantityFlag",
+            "canUpdateSimpleProduct",
+            "canUpdateMatrixProduct",
+            "canUpdateProductPricingFlag",
+            "canUpdateProductQuantityFlag",
+            "doInsertSimpleProduct",
+            "doInsertMatrixProduct",
+            "doInsertProductPricingFlag",
+            "doInsertProductQuantityFlag",
+            "doUpdateSimpleProduct",
+            "doUpdateMatrixProduct",
+            "doUpdateProductPricingFlag",
+            "doUpdateProductQuantityFlag",
+            "doPutProductPricingFlag",
+            "doPutProductQuantityFlag"
           ],
-          "properties" : {
-            "canUpdateOrderFlag" : {
-              "type" : "boolean",
-              "title" : "PUT Order, canUpdateOrderFlag"
+          "properties": {
+            "canInsertSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertSimpleProduct"
+            },
+            "canInsertMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertMatrixProduct"
+            },
+            "canInsertProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertProductPricingFlag"
+            },
+            "canInsertProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canInsertProductQuantityFlag"
+            },
+            "canUpdateSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateSimpleProduct"
+            },
+            "canUpdateMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateMatrixProduct"
+            },
+            "canUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateProductPricingFlag"
+            },
+            "canUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, canUpdateProductQuantityFlag"
+            },
+            "doInsertSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertSimpleProduct"
+            },
+            "doInsertMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertMatrixProduct"
+            },
+            "doInsertProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertProductPricingFlag"
+            },
+            "doInsertProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doInsertProductQuantityFlag"
+            },
+            "doUpdateSimpleProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateSimpleProduct"
+            },
+            "doUpdateMatrixProduct": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateMatrixProduct"
+            },
+            "doUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductPricingFlag"
+            },
+            "doUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductQuantityFlag"
+            },
+            "doPutProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductPricingFlag"
+            },
+            "doPutProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doPutProductQuantityFlag"
             }
           },
-          "type" : "object"
+          "type": "object"
         }
       },
-      "ruleDef" : {
-        "defaultRuleValues" : {},
-        "ruleSchema" : {}
-      },
-      "documentDef" : {
+      "documentDef": {
         "schema": {},
-        "referenceLocation": {"salesOrderBusinessReferences": [""]}
+        "referenceLocation": {},
+        "remoteID": "product_id",
+        "businessReferences": ["sku"],
+        "children": [
+          {
+            "name": "PRODUCTPRICING",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          },
+          {
+            "name": "PRODUCTQUANTITY",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          },
+          {
+            "name": "variant",
+            "location": "variants",
+            "remoteID": "id",
+            "businessReferences": ["sku"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "PUT PRODUCTPRICING",
+      "description": "PUT PRODUCTPRICING",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCTPRICING",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "canUpdateProductPricingFlag": true,
+          "doUpdateProductPricingFlag": true
+        },
+        "configView": ["doUpdateProductPricingFlag"],
+        "configModel": {
+          "required": ["canUpdateProductPricingFlag", "doUpdateProductPricingFlag"],
+          "properties": {
+            "canUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT ProductPricing, canUpdateProductPricingFlag"
+            },
+            "doUpdateProductPricingFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductPricingFlag"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": {},
+        "remoteID": "id",
+        "businessReferences": ["sku"]
+      }
+    },
+    {
+      "name": "PUT PRODUCTQUANTITY",
+      "description": "PUT PRODUCTQUANTITY",
+      "channelVerb": "PUT",
+      "channelNoun": "PRODUCTQUANTITY",
+      "ruleDef": {
+        "ruleSchema": {},
+        "defaultRuleValues": {}
+      },
+      "configDef": {
+        "configValues": {
+          "canUpdateProductQuantityFlag": true,
+          "doUpdateProductQuantityFlag": true
+        },
+        "configView": ["doUpdateProductQuantityFlag"],
+        "configModel": {
+          "required": ["canUpdateProductQuantityFlag", "doUpdateProductQuantityFlag"],
+          "properties": {
+            "canUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT ProductQuantity, canUpdateProductQuantityFlag"
+            },
+            "doUpdateProductQuantityFlag": {
+              "type": "boolean",
+              "title": "PUT Product, doUpdateProductQuantityFlag"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "documentDef": {
+        "schema": {},
+        "referenceLocation": {},
+        "remoteID": "id",
+        "businessReferences": ["sku"]
       }
     },
     {
@@ -341,50 +269,49 @@
         "defaultRuleValues": {}
       },
       "configDef": {
-        "configValues" : {
-          "canUpdateFulfillmentFlag" : true
-        },
-        "configView" : [
-          "canUpdateFulfillmentFlag"
-        ],
-        "configModel" : {
-          "required": [
-            "canUpdateFulfillmentFlag"
-          ],
+        "configModel": {
+          "type": "object",
           "properties": {
+            "canInsertFulfillmentFlag": {
+              "type": "boolean",
+              "title": "PUT Fulfillment, canInsertFulfillmentFlag"
+            },
             "canUpdateFulfillmentFlag": {
               "type": "boolean",
               "title": "PUT Fulfillment, canUpdateFulfillmentFlag"
+            },
+            "doInsertFulfillmentFlag": {
+              "type": "boolean",
+              "title": "PUT Fulfillment, doInsertFulfillmentFlag"
+            },
+            "doUpdateFulfillmentFlag": {
+              "type": "boolean",
+              "title": "PUT Fulfillment, doUpdateFulfillmentFlag"
             }
           },
-          "type": "object"
+          "required": [
+            "canInsertFulfillmentFlag",
+            "canUpdateFulfillmentFlag",
+            "doInsertFulfillmentFlag",
+            "doUpdateFulfillmentFlag"
+          ]
+        },
+        "configView": ["doInsertFulfillmentFlag", "doUpdateFulfillmentFlag"],
+        "configValues": {
+          "canInsertFulfillmentFlag": true,
+          "canUpdateFulfillmentFlag": true,
+          "doInsertFulfillmentFlag": true,
+          "doUpdateFulfillmentFlag": true
         }
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {
-          "fulfillmentBusinessReferences": [""],
-          "salesOrderBusinessReferences": [""]
-        }
-      }
-    },
-    {
-      "name": "GET CUSTOMER",
-      "description": "GET CUSTOMER",
-      "channelVerb": "GET",
-      "channelNoun": "CUSTOMER",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {},
-        "configView": [],
-        "configValues": {}
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {"customerBusinessReferences": ["", ""]}
+        "referenceLocation": {},
+        "secondaryReferences": {
+          "salesOrderBusinessReferences": ["order.orderNumber"]
+        },
+        "remoteID": "tracking_id",
+        "businessReferences": ["value"]
       }
     },
     {
@@ -396,29 +323,107 @@
         "ruleSchema": {},
         "defaultRuleValues": {}
       },
-      "configDef" : {
-        "configModel" : {
-          "type" : "object",
-          "properties" : {
-            "canUpdateCustomerFlag" : {
-              "title" : "PUT Customer, canUpdateCustomerFlag",
-              "type" : "boolean"
+      "configDef": {
+        "configModel": {
+          "type": "object",
+          "properties": {
+            "doPutCustomerAddressesFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doPutCustomerAddressesFlag"
+            },
+            "canInsertCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerFlag"
+            },
+            "canInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerAddressFlag"
+            },
+            "canInsertCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canInsertCustomerContactFlag"
+            },
+            "canUpdateCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerFlag"
+            },
+            "canUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerAddressFlag"
+            },
+            "canUpdateCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, canUpdateCustomerContactFlag"
+            },
+            "doInsertCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerFlag"
+            },
+            "doInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerAddressFlag"
+            },
+            "doInsertCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doInsertCustomerContactFlag"
+            },
+            "doUpdateCustomerFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerFlag"
+            },
+            "doUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerAddressFlag"
+            },
+            "doUpdateCustomerContactFlag": {
+              "type": "boolean",
+              "title": "PUT Customer, doUpdateCustomerContactFlag"
             }
           },
-          "required" : [
-            "canUpdateCustomerFlag"
+          "required": [
+            "doPutCustomerAddressesFlag",
+            "canInsertCustomerFlag",
+            "canInsertCustomerAddressFlag",
+            "canInsertCustomerContactFlag",
+            "canUpdateCustomerFlag",
+            "canUpdateCustomerAddressFlag",
+            "canUpdateCustomerContactFlag",
+            "doInsertCustomerFlag",
+            "doInsertCustomerAddressFlag",
+            "doInsertCustomerContactFlag",
+            "doUpdateCustomerFlag",
+            "doUpdateCustomerAddressFlag",
+            "doUpdateCustomerContactFlag"
           ]
         },
-        "configView" : [
-          "canUpdateCustomerFlag"
+        "configView": [
+          "doPutCustomerAddressesFlag",
+          "doInsertCustomerFlag",
+          "doInsertCustomerAddressFlag",
+          "doUpdateCustomerFlag",
+          "doUpdateCustomerAddressFlag"
         ],
-        "configValues" : {
-          "canUpdateCustomerFlag": true
+        "configValues": {
+          "doPutCustomerAddressesFlag": true,
+          "canInsertCustomerFlag": true,
+          "canInsertCustomerAddressFlag": true,
+          "canInsertCustomerContactFlag": false,
+          "canUpdateCustomerFlag": true,
+          "canUpdateCustomerAddressFlag": true,
+          "canUpdateCustomerContactFlag": false,
+          "doInsertCustomerFlag": true,
+          "doInsertCustomerAddressFlag": true,
+          "doInsertCustomerContactFlag": false,
+          "doUpdateCustomerFlag": true,
+          "doUpdateCustomerAddressFlag": true,
+          "doUpdateCustomerContactFlag": false
         }
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {"customerBusinessReferences": ["", ""]}
+        "referenceLocation": {},
+        "remoteID": "profile_id",
+        "businessReferences": ["login"]
       }
     },
     {
@@ -434,73 +439,43 @@
         "configModel": {
           "type": "object",
           "properties": {
-            "doPutCustomerAddressesFlag": {
-              "title": "PUT Customer Address, doPutCustomerAddressesFlag",
-              "type": "boolean"
+            "canInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, canInsertCustomerAddressFlag"
             },
             "canUpdateCustomerAddressFlag": {
-              "title": "Update Customer Address, canUpdateCustomerAddressFlag",
-              "type": "boolean"
-            }
-          },
-          "required": [
-            "doPutCustomerAddressesFlag",
-            "canUpdateCustomerAddressFlag"
-          ]
-        },
-        "configView": [
-          "doPutCustomerAddressesFlag",
-          "canUpdateCustomerAddressFlag"
-        ],
-        "configValues": {
-          "doPutCustomerAddressesFlag": true,
-          "canUpdateCustomerAddressFlag": true
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {}
-      }
-    },
-    {
-      "name": "PUT CUSTOMERCONTACT",
-      "description": "PUT CUSTOMERCONTACT",
-      "channelVerb": "PUT",
-      "channelNoun": "CUSTOMERCONTACT",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configModel": {
-          "type": "object",
-          "properties": {
-            "doPutCustomerContactsFlag": {
-              "title": "PUT Customer Contacts, doPutCustomerContactsFlag",
-              "type": "boolean"
+              "type": "boolean",
+              "title": "PUT Customer Address, canUpdateCustomerAddressFlag"
             },
-            "canUpdateCustomerContactFlag": {
-              "title": "Update Customer Contacts, canUpdateCustomerContactFlag",
-              "type": "boolean"
+            "doInsertCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, doInsertCustomerAddressFlag"
+            },
+            "doUpdateCustomerAddressFlag": {
+              "type": "boolean",
+              "title": "PUT Customer Address, doUpdateCustomerAddressFlag"
             }
           },
           "required": [
-            "doPutCustomerContactsFlag",
-            "canUpdateCustomerContactFlag"
+            "canInsertCustomerAddressFlag",
+            "canUpdateCustomerAddressFlag",
+            "doInsertCustomerAddressFlag",
+            "doUpdateCustomerAddressFlag"
           ]
         },
-        "configView": [
-          "doPutCustomerContactsFlag",
-          "canUpdateCustomerContactFlag"
-        ],
+        "configView": ["doInsertCustomerAddressFlag", "doUpdateCustomerAddressFlag"],
         "configValues": {
-          "doPutCustomerContactsFlag": false,
-          "canUpdateCustomerContactFlag": false
+          "canInsertCustomerAddressFlag": true,
+          "canUpdateCustomerAddressFlag": true,
+          "doInsertCustomerAddressFlag": true,
+          "doUpdateCustomerAddressFlag": true
         }
       },
       "documentDef": {
         "schema": {},
-        "referenceLocation": {}
+        "referenceLocation": {},
+        "remoteID": "address_id",
+        "businessReferences": ["$join(addressFields.value)"]
       }
     }
   ],
@@ -508,26 +483,39 @@
     "configDef": {
       "configModel": {
         "type": "object",
-        "title": "Template Channel Settings",
+        "title": "X-Cart Channel Settings",
         "properties": {
           "protocol": {
             "title": "Protocol",
             "type": "string"
           },
-          "implFolderName": {
-            "title": "Implementation Folder Name",
+          "adminUrl": {
+            "title": "Admin Url",
+            "type": "string"
+          },
+          "vendor": {
+            "title": "Vendor Account Email",
             "type": "string"
           }
         },
-        "required": [
-          "protocol",
-          "implFolderName"
-        ]
+        "required": ["protocol", "adminUrl"]
       },
-      "configView": [],
+      "configView": [
+        {
+          "key": "protocol",
+          "title": "Protocol"
+        },
+        {
+          "key": "adminUrl",
+          "title": "Admin Url"
+        },
+        {
+          "key": "vendor",
+          "title": "Vendor Account Email"
+        }
+      ],
       "configValues": {
-        "protocol": "https",
-        "implFolderName": "nav"
+        "protocol": "http"
       }
     }
   },
@@ -536,22 +524,21 @@
     "configDef": {
       "configModel": {
         "type": "object",
-        "title": "Credentials Config",
+        "title": "X-Cart Credentials Config",
         "properties": {
-          "account": {
-            "title": "Account Number",
+          "apiKey": {
+            "title": "API Key",
             "type": "string"
           }
         },
-        "required": [
-          "account"
-        ]
+        "required": ["apiKey"]
       },
       "configView": [
-				{
-					"key": "account",
-					"title": "Account Number"
-				}
+        {
+          "key": "apiKey",
+          "title": "API Key",
+          "type": "password"
+        }
       ],
       "configValues": {}
     }

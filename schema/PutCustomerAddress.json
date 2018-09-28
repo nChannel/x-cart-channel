@@ -1,0 +1,98 @@
+{
+  "name": "X-Cart Put Customer Address Schema",
+  "schemaDef": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1,
+    "properties": {
+      "address_id": {
+        "type": "integer"
+      },
+      "address_type": {
+        "description": "Residential/Commercial",
+        "type": "string",
+        "enum": ["R", "C"]
+      },
+      "is_billing": {
+        "type": "boolean"
+      },
+      "is_shipping": {
+        "type": "boolean"
+      },
+      "isWork": {
+        "type": "boolean"
+      },
+      "profile": {
+        "description": "Reference to the profile (customer) that this address belongs to",
+        "type": "object",
+        "required": ["profile_id"],
+        "properties": {
+          "profile_id": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "title": "Profile"
+      },
+      "addressFields": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["value", "addressField"],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "value": {
+              "type": "string"
+            },
+            "addressField": {
+              "description":
+                "Reference to the address field being created/updated (ie. FirstName, LastName, Street, etc.)",
+              "type": "object",
+              "required": ["id"],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "title": "Address Field"
+            }
+          },
+          "additionalProperties": false,
+          "title": "Address Field Value"
+        },
+        "uniqueItems": true,
+        "title": "Address Field Values"
+      },
+      "state": {
+        "type": "object",
+        "required": ["state_id"],
+        "properties": {
+          "state_id": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "title": "State"
+      },
+      "country": {
+        "type": "object",
+        "required": ["code"],
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "title": "Country"
+      }
+    },
+    "additionalProperties": false,
+    "title": "Address"
+  },
+  "tags": ["X-Cart", "Put", "Customer", "Address"],
+  "audit": {}
+}
