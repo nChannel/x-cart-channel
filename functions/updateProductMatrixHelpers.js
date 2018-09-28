@@ -44,15 +44,19 @@ async function updateProductVariant(variant, updatedProduct) {
       product_id: updatedProduct.product_id
     };
 
-    reqs.uri = `${this.baseUri}?target=RESTAPI&_key=${
-      this.channelProfile.channelAuthValues.apiKey
-    }&_schema=default&_path=xc-productvariants-productvariant/0`;
-    reqs.body = variant;
+    let newReqs = {
+      uri: `${this.baseUri}?target=RESTAPI&_key=${
+        this.channelProfile.channelAuthValues.apiKey
+      }&_schema=default&_path=xc-productvariants-productvariant/0`,
+      method: "POST",
+      body: variant,
+      resolveWithFullResponse: true
+    };
 
-    this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
-    return this.request(reqs)
+    this.info(`Requesting [${newReqs.method} ${newReqs.uri}]`);
+    return this.request(newReqs)
       .then(response => {
-        logInfo(`Variant Inserted with ID: ${response.body.id}`);
+        this.info(`Variant Inserted with ID: ${response.body.id}`);
         variant.id = response.body.id;
         variant.options = options;
 
@@ -95,10 +99,14 @@ function updateAttributeVariantValues(variant, updatedVariant) {
           }
         });
 
-        reqs.body = attributeValue;
+        let updateReqs = {
+          uri: url,
+          method: "PUT",
+          resolveWithFullResponse: true
+        };
 
-        this.info(`Requesting [${reqs.method} ${reqs.uri}]`);
-        return this.request(reqs)
+        this.info(`Requesting [${updateReqs.method} ${updateReqs.uri}]`);
+        return this.request(updateReqs)
           .then(response => {
             this.info(`Attribute Value Updated with ID: ${response.body.id}`);
           })

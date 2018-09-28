@@ -3482,9 +3482,9 @@
           "statusCode": 200,
           "payload": {
             "doc": {
-              "login": "derek.boytim@nchannel.com",
-              "profile_id": 17
-            }
+              "login": "derek.boytim@nchannel.com"
+            },
+            "customerRemoteID": 17
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3621,9 +3621,9 @@
           "statusCode": 400,
           "payload": {
             "doc": {
-              "login": "derek.boytim@nchannel.com",
-              "profile_id": 17
-            }
+              "login": "derek.boytim@nchannel.com"
+            },
+            "customerRemoteID": 17
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3644,9 +3644,9 @@
           "statusCode": 429,
           "payload": {
             "doc": {
-              "login": "derek.boytim@nchannel.com",
-              "profile_id": 17
-            }
+              "login": "derek.boytim@nchannel.com"
+            },
+            "customerRemoteID": 17
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3667,9 +3667,9 @@
           "statusCode": 500,
           "payload": {
             "doc": {
-              "login": "derek.boytim@nchannel.com",
-              "profile_id": 17
-            }
+              "login": "derek.boytim@nchannel.com"
+            },
+            "customerRemoteID": 17
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3695,7 +3695,6 @@
           "statusCode": 200,
           "payload": {
             "doc": {
-              "address_id": 73,
               "is_billing": true,
               "is_shipping": true,
               "isWork": false,
@@ -3747,7 +3746,9 @@
               "country": {
                 "code": "US"
               }
-            }
+            },
+            "customerRemoteID": 17,
+            "customerAddressRemoteID": 73
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3864,7 +3865,6 @@
           "statusCode": 400,
           "payload": {
             "doc": {
-              "address_id": 73,
               "is_billing": true,
               "is_shipping": true,
               "isWork": false,
@@ -3916,7 +3916,9 @@
               "country": {
                 "code": "US"
               }
-            }
+            },
+            "customerRemoteID": 17,
+            "customerAddressRemoteID": 73
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -3937,7 +3939,6 @@
           "statusCode": 429,
           "payload": {
             "doc": {
-              "address_id": 73,
               "is_billing": true,
               "is_shipping": true,
               "isWork": false,
@@ -3989,7 +3990,9 @@
               "country": {
                 "code": "US"
               }
-            }
+            },
+            "customerRemoteID": 17,
+            "customerAddressRemoteID": 73
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -4010,7 +4013,6 @@
           "statusCode": 500,
           "payload": {
             "doc": {
-              "address_id": 73,
               "is_billing": true,
               "is_shipping": true,
               "isWork": false,
@@ -4062,7 +4064,9 @@
               "country": {
                 "code": "US"
               }
-            }
+            },
+            "customerRemoteID": 17,
+            "customerAddressRemoteID": 73
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
@@ -4257,11 +4261,20 @@
         {
           "statusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {},
+            "productRemoteID": 152
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
-          "links": [],
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 400,
+              "responsePayload": {}
+            }
+          ],
           "channelProfile": {
             "productBusinessReferences": ["sku"]
           }
@@ -4654,11 +4667,20 @@
         {
           "statusCode": 400,
           "payload": {
-            "doc": {}
+            "doc": {},
+            "productRemoteID": 152
           },
           "baseUri": "https://localhost/admin.php",
           "defaultHeaders": {},
-          "links": [],
+          "links": [
+            {
+              "uri": "?target=RESTAPI&_key=read-write-token&_schema=default&_path=product/152",
+              "method": "PUT",
+              "replyHeaders": {},
+              "statusCode": 400,
+              "responsePayload": {}
+            }
+          ],
           "channelProfile": {
             "productBusinessReferences": ["sku"]
           }

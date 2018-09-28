@@ -1,13 +1,6 @@
 "use strict";
 
 module.exports = function(flowContext, payload) {
-  if (!payload.productRemoteID) {
-    return Promise.reject({
-      statusCode: 400,
-      errors: ["productRemoteID is missing and is required for updating the product."]
-    });
-  }
-
   let options = {
     uri: `${this.baseUri}?target=RESTAPI&_key=${
       this.channelProfile.channelAuthValues.apiKey

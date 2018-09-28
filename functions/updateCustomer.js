@@ -1,16 +1,7 @@
 "use strict";
 
 module.exports = function(flowContext, payload) {
-  if (!payload.doc.profile_id && payload.customerRemoteID) {
-    payload.doc.profile_id = payload.customerRemoteID;
-  }
-
-  if (!payload.doc.profile_id) {
-    return Promise.reject({
-      statusCode: 400,
-      errors: ["profile_id (customerRemoteID) is a required property for updating an existing customer."]
-    });
-  }
+  payload.doc.profile_id = payload.customerRemoteID;
 
   let requestBody = JSON.parse(JSON.stringify(payload.doc));
   delete requestBody.addresses;

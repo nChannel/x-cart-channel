@@ -1,13 +1,6 @@
 "use strict";
 
 module.exports = function(flowContext, payload) {
-  if (!payload.doc.login) {
-    return Promise.reject({
-      statusCode: 400,
-      errors: ["login (email) is a required property for inserting a new customer."]
-    });
-  }
-
   let requestBody = JSON.parse(JSON.stringify(payload.doc));
   delete requestBody.addresses;
 

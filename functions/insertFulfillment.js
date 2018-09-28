@@ -5,16 +5,7 @@ module.exports = function(flowContext, payload) {
     payload.doc.order = {};
   }
 
-  if (!payload.doc.order.order_id && payload.salesOrderRemoteID) {
-    payload.doc.order.order_id = payload.salesOrderRemoteID;
-  }
-
-  if (!payload.doc.order.order_id) {
-    return Promise.reject({
-      statusCode: 400,
-      errors: ["order.order_id (salesOrderRemoteID) is a required property for inserting a new tracking number."]
-    });
-  }
+  payload.doc.order.order_id = payload.salesOrderRemoteID;
 
   let options = {
     uri: `${this.baseUri}?target=RESTAPI&_key=${

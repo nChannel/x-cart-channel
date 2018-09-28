@@ -29,120 +29,6 @@
       }
     },
     {
-      "name": "GET PRODUCT",
-      "description": "GET PRODUCT",
-      "channelVerb": "GET",
-      "channelNoun": "PRODUCT",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues": {
-          "canGetSimpleProducts": true,
-          "canGetMatrixProducts": true,
-          "canGetVirtualMatrixProducts": false,
-          "doGetSimpleProducts": true,
-          "doGetMatrixProducts": true,
-          "doGetVirtualMatrixProducts": false
-        },
-        "configView": ["doGetMatrixProducts", "doGetSimpleProducts"],
-        "configModel": {
-          "required": [],
-          "properties": {
-            "doGetMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Matrix, doGetMatrixProducts"
-            },
-            "doGetVirtualMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Virtual Matrix, doGetVirtualMatrixProducts"
-            },
-            "doGetSimpleProducts": {
-              "type": "boolean",
-              "title": "GET Simple Product, doGetSimpleProducts"
-            },
-            "canGetMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Matrix, canGetMatrixProducts"
-            },
-            "canGetVirtualMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Virtual Matrix, canGetVirtualMatrixProducts"
-            },
-            "canGetSimpleProducts": {
-              "type": "boolean",
-              "title": "GET Simple Product, canGetSimpleProducts"
-            }
-          },
-          "type": "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {},
-        "remoteID": "product_id",
-        "businessReferences": ["sku"]
-      }
-    },
-    {
-      "name": "REFRESH PRODUCT",
-      "description": "REFRESH PRODUCT",
-      "channelVerb": "REFRESH",
-      "channelNoun": "PRODUCT",
-      "ruleDef": {
-        "ruleSchema": {},
-        "defaultRuleValues": {}
-      },
-      "configDef": {
-        "configValues": {
-          "canGetSimpleProducts": true,
-          "canGetMatrixProducts": true,
-          "canGetVirtualMatrixProducts": false,
-          "doGetSimpleProducts": true,
-          "doGetMatrixProducts": true,
-          "doGetVirtualMatrixProducts": false
-        },
-        "configView": [],
-        "configModel": {
-          "required": [],
-          "properties": {
-            "doGetMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Matrix, doGetMatrixProducts"
-            },
-            "doGetVirtualMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Virtual Matrix, doGetVirtualMatrixProducts"
-            },
-            "doGetSimpleProducts": {
-              "type": "boolean",
-              "title": "GET Simple Product, doGetSimpleProducts"
-            },
-            "canGetMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Matrix, canGetMatrixProducts"
-            },
-            "canGetVirtualMatrixProducts": {
-              "type": "boolean",
-              "title": "GET Product Virtual Matrix, canGetVirtualMatrixProducts"
-            },
-            "canGetSimpleProducts": {
-              "type": "boolean",
-              "title": "GET Simple Product, canGetSimpleProducts"
-            }
-          },
-          "type": "object"
-        }
-      },
-      "documentDef": {
-        "schema": {},
-        "referenceLocation": {},
-        "remoteID": "product_id",
-        "businessReferences": ["sku"]
-      }
-    },
-    {
       "name": "PUT PRODUCT",
       "description": "PUT PRODUCT",
       "channelVerb": "PUT",
@@ -605,6 +491,10 @@
           "adminUrl": {
             "title": "Admin Url",
             "type": "string"
+          },
+          "vendor": {
+            "title": "Vendor Account Email",
+            "type": "string"
           }
         },
         "required": ["protocol", "adminUrl"]
@@ -613,6 +503,14 @@
         {
           "key": "protocol",
           "title": "Protocol"
+        },
+        {
+          "key": "adminUrl",
+          "title": "Admin Url"
+        },
+        {
+          "key": "vendor",
+          "title": "Vendor Account Email"
         }
       ],
       "configValues": {

@@ -6,13 +6,6 @@ module.exports = function(flowContext, payload) {
   let variants = [];
   let attributeValues = [];
 
-  if (!payload.productRemoteID) {
-    return Promise.reject({
-      statusCode: 400,
-      errors: ["productRemoteID is missing and is required for updating the product."]
-    });
-  }
-
   if (payload.doc.variants) {
     variants = JSON.parse(JSON.stringify(payload.doc.variants));
     delete payload.doc.variants;
