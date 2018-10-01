@@ -2,7 +2,7 @@
   "name": "@nchannel/x-cart-channel",
   "author": "nChannel Developers <developers@nchannel.com>",
   "description": "X-Cart channel for the nChannel platform.",
-  "main": "x_cart_channel.js",
+  "main": "XCart.js",
   "dependencies": {
     "@nchannel/endpoint-sdk": "1.0.10",
     "moment": "2.22.2"

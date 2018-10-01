@@ -4,7 +4,7 @@ let requestErrors = require("request-promise/errors");
 let Channel = require("@nchannel/endpoint-sdk").PromiseChannel;
 let nc = require("./util/ncUtils");
 
-class x_cart_channel extends Channel {
+class XCart extends Channel {
   constructor(...args) {
     super(...args);
 
@@ -203,4 +203,4 @@ class x_cart_channel extends Channel {
   }
 }
 
-module.exports = x_cart_channel;
+module.exports = XCart;
